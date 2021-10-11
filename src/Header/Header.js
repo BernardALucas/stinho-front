@@ -3,17 +3,25 @@ import "./Header.css"
 
 function Header(){
     return(
-        <div className = "base">
-                <h1>Stinho</h1>
 
+        <div className = "container">
+            
+            <div className="logo">
+                    <img src="./images/logo_header.png" alt= "Stinho"/> 
+                </div>
+
+            <div className = "base">
                 <div className = "botoes">
-                    <button>Home</button>
-                    <button>Store</button>
-                    <button>Biblioteca</button>
-                    <button>Entrar</button>
+                    <div className = "home"><button>Home</button></div>
+                    <div className = "store"><button>Store</button></div>
+                    <div className = "biblioteca"><button>Biblioteca</button></div>
+                    <div className = "entrar"><button>Entrar</button></div>
                 </div>
                 
         </div>
+        </div>
+
+        
     )
 }
 

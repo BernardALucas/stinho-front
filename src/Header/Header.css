@@ -1,13 +1,31 @@
+.container{
+    max-width: 1440px;
+    height: 70px;
+    position: absolute;
+    top: 0px;
+}
+
+.logo{
+    margin-left: 162px;
+}
+
 .base{
     display: flex;
     position: absolute;
-    width: 1440px;
-    height: 70px;
-    left: 0px;
+    max-width: 1440px;
+    height: 58px;
     top: 0px;
+    background-color: black;
 }
 
 .botoes{
     display: flex;
+    width: 1440px;    
+    height: 58px;    
     justify-content: flex-end;
+    margin-right: 162px;
+}
+
+.home{
+    height: 58px;
 }
