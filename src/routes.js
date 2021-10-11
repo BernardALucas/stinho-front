@@ -1,7 +1,9 @@
 import React from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import {BrowserRouter, Route, Switch } from "react-router-dom";
 
-import Home from "./Pages/Home"
+import Login from "./Pages/Login";
+import Home from "./Pages/Home";
+import Cadastro from "./Pages/Cadastro";
 
 function Routes(){
     return(
@@ -9,8 +11,9 @@ function Routes(){
         <Switch> 
             
             <Route path="/home" component ={Home}/>
-        
-        </Switch>     
+            <Route path="/login" componet ={Login}/>
+            <Route path="/cadastro" componet ={Cadastro}/>        
+        </Switch>
     </BrowserRouter>
     );
 }
