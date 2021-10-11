@@ -1,10 +1,11 @@
 import React from "react";
-import "./css/Home.css"
+import Header from "../../Header";
+import "./Home.css"
 
 function Home(){
     return(
         <div header> 
-            <h1> Hello World </h1>
+            { Header() }
         </div>
 
     );
