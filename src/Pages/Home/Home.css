@@ -1,0 +1,66 @@
+.container-home{
+    background-color: #121212;
+}
+
+.destaques-home{
+    margin-top: 34px;
+}
+
+.titulo-home{
+    margin-left: 162px;
+    margin-bottom: 30px;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.carrossel-home{
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 50%), linear-gradient(270deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.promocao-home{
+    margin-top: 85px;
+}
+
+.promocao-destaque-home{
+    margin-left: 162px;
+    margin-right: 162px;
+}
+
+.promocao-destaque-home{
+    display: flex;
+    justify-content: space-between;
+    }
+
+.promocao-destaque-home img{
+    width: 532px;
+    height: 205px;
+    object-fit: cover;
+}
+
+.texto-promocao-destaque-home h1{
+    color:white;
+    font-size: 22pt;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.texto-promocao-destaque-home h2{
+    color:white;
+    opacity: 50%;
+    font-size: 22pt;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.destaque1-home{
+    max-width: 532px;
+    margin-right: 52px;
+
+}
+
+.preco{
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
