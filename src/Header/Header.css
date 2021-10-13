@@ -1,79 +1,45 @@
-.container{
-    max-width: 1440px;
-    height: 70px;
-    position: absolute;
-    top: 0px;
-}
-
 .logo{
     margin-left: 162px;
 }
 
 .base{
     display: flex;
-    position: absolute;
-    max-width: 1440px;
+    /* position: absolute; */
+    max-width: 3840px;
     height: 58px;
     top: 0px;
     background-color: black;
-
 }
 
 .botoes{
     display: flex;
-    width: 1440px;    
+    width: 3678px;    
     height: 58px;    
     justify-content: flex-end;
-    margin-right: 162px;
-    
+    margin-right: 162px;    
 }
 
-.home{
-    height: 100%;
-    margin-right: 43px;
-    font-size: 20pt;
-    display: flex;
-    align-items: flex-end;
-
-}
-
-.store{
-    height: 100%;
-    margin-right: 43px;
-    font-size: 20pt;
-    display: flex;
-    align-items: flex-end;
-}
-
-.biblioteca{
-    height: 100%;
-    margin-right: 43px;
-    font-size: 20pt;
-    display: flex;
-    align-items: flex-end;
-}
-
-.entrar{
-    height: 100%;
-    font-size: 20pt;
-    display: flex;
-    align-items: flex-end;
-    color: white;
-    background-color: black;
-}
 
 .btn{
     background-color: black;
-    color: #808080;
-    font-size: 20pt;
     border-color: black;
+    color: #808080;
+    
+    font-size: 20pt;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
     cursor: pointer;
+    margin-left: 43px;
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
 
+    border-width: 3px;
 }
 
-.btn span::after{
-    border-bottom: #3bce3b;
+.btn:hover{
+    color:#3bce3b;
+    border-bottom-color: #3bce3b;
 }
     
 
