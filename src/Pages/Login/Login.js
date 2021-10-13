@@ -6,34 +6,26 @@ import { Form, Button, FormGroup, FormControl, ControlLabel } from "react-bootst
 
 function Login(){
     return(
-        <div className="base">
-            <div className="retangulo">
-                <div className="voltar">
+        <div className="base-login">
+            <div className="retangulo-login">
+                <div className="voltar-login">
                 <Breadcrumb>
                     <Breadcrumb.Item href="home">voltar para a pagina principal</Breadcrumb.Item>
                 </Breadcrumb>
                 </div>
 
-                <div className="conjunto">
-                    <div className="logo">
+                <div className="conjunto-login">
+                    <div className="logo-login">
                     <img src="/images/logo.png" alt="logo"/>
                     </div>
-                    <div className="inputs">
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
-                            <Form.Control type="email" placeholder="Endereço de email" />
-                        </Form.Group>
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
-                            <Form.Control type="password" placeholder="senha" />
-                        </Form.Group>
-                        <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                            <Form.Check type="checkbox" label="manter-me logado" />
-                        </Form.Group>
-                        <Breadcrumb>
-                            <Breadcrumb.Item href="#">esqueceu sua senha?</Breadcrumb.Item>
-                        </Breadcrumb>
-                        <Button variant="dark">iniciar sessão</Button>{' '} 
+                    <div className="inputs-login">
+                        <input className="email-login" placeholder="endereço de email"></input>
+                        <input className="email-login" placeholder="senha" type="password" ></input>
+                        <div className="manter-logado"><input type="checkbox" className="chexkbox-login" label="manter-me logado"></input></div>
+                        <div className="botao-login"><button className="btn-login">iniciar sessão</button></div>
                     </div>
-                    <div className="cadastrar">
+
+                    <div className="cadastrar-login">
                     ainda não é cadastrado?
                     <Breadcrumb>
                     <Breadcrumb.Item href="cadastro">cadastrar-se</Breadcrumb.Item>
