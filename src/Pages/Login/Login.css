@@ -25,6 +25,14 @@
 .voltar-login{
     margin-left: 10px;
 }
+.btn-login{
+    border-style: hidden;
+    background: #121212;
+    padding-left: 12px;
+    color: #99a1a7;
+    text-decoration: underline;
+    font-size: 14px;
+}
 .conjunto-login{
     margin-top: 70px;
     margin-left: 100px;
@@ -37,9 +45,7 @@
     flex-direction: column;
 
 }
-input::placeholder{color: #808080;  }
-
-
+input::placeholder{color: #808080;}
 
 .email-login{
     margin-bottom: 30px;
@@ -55,15 +61,48 @@ input::placeholder{color: #808080;  }
     padding-left: 10px;
 }
 
-.botao-login{
+
+.manter-logado{
+    color: #808080;
+    padding-left: 6px;
+    font-size: 14px;
+  
+}
+.manter-logado label{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.checkbox-login{
+    -webkit-appearance: none;
+    position: flex;
+    width: 21px;
+    height: 21px;
+    background-color: #323232 ;
+    /* border: 1px solid #000000 ; */
+    box-sizing: border-box ;
+}
+/* .checkbox-login:active, .checkbox-login:checked:active {
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+} */
+.checkbox-login:checked{
+    background-color: #3BCE3B;
+	border: 4px solid #323232;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+	color: #99a1a7;
+}
+
+.botao-logar{
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 45px;
+    padding-top: 18px;
     
 
 }
-.btn-login{
+.btn-logar{
     width: 169px;
     height: 58px;
     background: #000000;
@@ -73,21 +112,14 @@ input::placeholder{color: #808080;  }
     border-radius: 3px;
     font-size: 15pt;
 }
-.btn-login:hover{
+.btn-logar:hover{
     background: #3BCE3B;
     color: #000000;
     border: 0.25px solid #000000;
 }
 
-.manter-logado{
-
-}
-
-.checbox-login{
-
-}
 
 .cadastrar-login{
-    
+    color: #808080;
     display: flex;
 }

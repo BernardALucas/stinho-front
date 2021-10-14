@@ -1,17 +1,16 @@
 import React from "react";
 import "./Login.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Breadcrumb from 'react-bootstrap/Breadcrumb'
-import { Form, Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
+import { useHistory } from "react-router-dom"
 
 function Login(){
+    const history = useHistory();
+
     return(
         <div className="base-login">
             <div className="retangulo-login">
                 <div className="voltar-login">
-                <Breadcrumb>
-                    <Breadcrumb.Item href="home">voltar para a pagina principal</Breadcrumb.Item>
-                </Breadcrumb>
+                <button className="btn-login" onClick = {()=>{history.push("home");}} > voltar para a pagina principal</button>
                 </div>
 
                 <div className="conjunto-login">
@@ -21,15 +20,17 @@ function Login(){
                     <div className="inputs-login">
                         <input className="email-login" placeholder="endereço de email"></input>
                         <input className="email-login" placeholder="senha" type="password" ></input>
-                        <div className="manter-logado"><input type="checkbox" className="chexkbox-login" label="manter-me logado"></input></div>
-                        <div className="botao-login"><button className="btn-login">iniciar sessão</button></div>
+                        <div>
+                            <input type="checkbox" id="checkbox-login"className="checkbox-login" />
+                            <label for="checkbox-login" className="manter-logado"> manter-me logado </label>
+                            <button className="btn-login">esqueceu sua senha</button>
+                        </div>
+                        <div className="botao-logar"><button className="btn-logar">iniciar sessão</button></div>
                     </div>
 
                     <div className="cadastrar-login">
                     ainda não é cadastrado?
-                    <Breadcrumb>
-                    <Breadcrumb.Item href="cadastro">cadastrar-se</Breadcrumb.Item>
-                    </Breadcrumb>
+                    <button className="btn-login" onClick = {()=>{history.push("");}}>cadastrar-se</button>
                     </div>
                 </div>  
             </div>
