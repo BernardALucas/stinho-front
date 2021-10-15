@@ -30,7 +30,7 @@ function Login(){
 
                     <div className="cadastrar-login">
                     ainda não é cadastrado?
-                    <button className="btn-login" onClick = {()=>{history.push("");}}>cadastrar-se</button>
+                    <button className="btn-login" onClick = {()=>{history.push("cadastro");}}>cadastrar-se</button>
                     </div>
                 </div>  
             </div>
