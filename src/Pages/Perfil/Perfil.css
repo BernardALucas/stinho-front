@@ -1,0 +1,69 @@
+.Container_Perfil{
+    width: 100%;
+    max-width: 1690px;
+    padding:0;
+    display: flex;
+    flex-direction: column;
+    
+
+}
+.grid_Perfil {
+	display: grid;
+}
+.grid-template-columns-1{
+    
+    grid-template-columns: 1px 400px;
+
+}
+.Dados_Perfil{
+    position: flex;
+    height: 240px;
+    width: 1100px;
+    margin-left: 162px;
+    margin-top: 27px;
+    background-color: #323232;
+    border-radius:0.1cm;
+   
+}
+.Editar_Perfil{
+    width: 150px;
+    margin-left: 940px;
+    background-color: #323232;
+    margin-top: 200px;
+    border-style: hidden;
+    color: #3bce3b;
+    text-decoration: underline;
+    font-size: 0.55cm;
+    cursor: pointer;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+.Lista_de_Amigos_Estatica{
+    flex-direction: column;
+    margin-left: 1292px;
+    margin-right: 30px;
+    margin-bottom: 100px;
+    margin-top: 27px;
+    height: 831px;
+    width: 231px;
+    border-radius:0.1cm;
+    background-color: #323232;
+
+}
+.Titulo_Lista_Amigos{
+    width: 231px;
+    margin-top: 20px;
+    margin-left: 20px;
+    color:#FFFFFF;
+    font-size: 0.7cm;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.Texto_Lista_Amigos{
+    width: 231px;
+    margin-left: 20px;
+    margin-top: 50px;
+    display: center;
+    color:#FFFFFF;
+    font-size: 0.4cm;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
