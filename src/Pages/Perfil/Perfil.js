@@ -11,7 +11,7 @@ function Perfil() {
       <div Header>{Header()}</div>
       <div className="Container_Perfil">
         <div>
-          <section class="grid grid-template-columns-1">
+          <section class="grid_Perfil grid-template-columns-1">
             <div className="Dados_Perfil">
               <button
                 className="Editar_Perfil"
