@@ -14,7 +14,8 @@
 .titulo-home{
     margin-left: 162px;
     margin-bottom: 30px;
-    color: white;   
+    color: white;
+    max-width: 1120px;
 }
 
 .carrossel-home{
@@ -151,6 +152,7 @@
 
 .botao-home button{
     border-radius: 10px;
+    border-style: solid;
     width: 227px;
     height: 73px;
     font-size: 12pt;
