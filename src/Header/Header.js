@@ -1,9 +1,9 @@
 import React from "react";
 import "./Header.css";
-import { useHistory } from "react-router-dom"
+import { useHistory } from "react-router-dom";
 
-function Header(){
-    const history = useHistory();
+function Header() {
+  const history = useHistory();
 
     return(   
             <div className = "base-header">
