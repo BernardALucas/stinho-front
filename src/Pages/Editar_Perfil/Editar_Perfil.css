@@ -1,0 +1,6 @@
+.Container_Editar_Perfil{
+    width: 1690px;
+    padding:0;
+    display: flex;
+    flex-direction: column;
+}
