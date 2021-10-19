@@ -14,8 +14,6 @@
     width: 490px;
     height: 100%;
 
-
-
     background: #121212;
     border-radius: 22px;
     padding-bottom: 5%;
@@ -36,42 +34,43 @@
 input::placeholder{color: #808080;}
 
 .caixa-cadastro{
-    margin-bottom: 30px;
+    margin-bottom: 6%;
     background-color: #323232;
-    width: 330px;
-    height: 60px;
+    width: 67%;
+    height: 6.5vh;
     display: flex;
     color: #B7C1BA;
     border: 1px solid #000000;
     box-sizing: border-box;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-size: 13pt;
-    padding-left: 10px;
+    font-size: 100%;
+    padding-left: 2%;
     
 }
 .caixa-menor{
-    margin-bottom: 30px;
+    margin-bottom: 6%;
     width: 96px;
-    height: 59.71px;
+    height: 6.5vh;
     background: #323232;
+    color: #B7C1BA;
     border: 1px solid #000000;
     box-sizing: border-box;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-size: 13pt;
-    padding-left: 10px;
+    font-size: 100%;
+    padding-left: 2%;
     margin-right: 18px;
-
 }
 .caixa-media{
-    margin-bottom: 30px;
+    margin-bottom: 6%;
     width: 216px;
-    height: 60px;
+    height: 6.5vh;
     background: #323232;
+    color: #B7C1BA;
     border: 1px solid #000000;
     box-sizing: border-box;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-size: 13pt;
-    padding-left: 10px;
+    font-size: 100%;
+    padding-left: 2%;
 }
 
 .enviar-email{
@@ -102,14 +101,20 @@ input::placeholder{color: #808080;}
 }
 
 .botao-cadastrar-se{
-    width: 169px;
-    height: 58px;
-    color: #B7C1BA;
-    background: #000000;
-    border: 0.25px solid #3bce3b;
-    box-sizing: border-box;
-    font-size: 15pt;
-    margin-bottom: 30px;
+    border-radius: 10px;
+    border-style: solid;
+    width: 50%;
+    height: 6vh;
+    font-size: 120%;
+
+    background-color: #121212;
+    border-color: #808080;
+
+    color: white;
+
+    cursor: pointer;
+    margin-top: 5%;
+    margin-bottom: 7%;
 
 }
 .botao-cadastrar-se:hover{
@@ -128,4 +133,32 @@ input::placeholder{color: #808080;}
     color: #99a1a7;
     text-decoration: underline;
     font-size: 13pt;
+}
+
+
+@media(max-width:500px){
+    .base-cadastro{
+        background-image: none;
+        padding-top: 0%;
+    }
+    .caixa-menor{
+      width: 120 ;
+      margin-right: 24px ;
+      height: 10vh;
+    }
+    .caixa-media{
+        width: 168px;
+        height: 10vh;
+    }
+    .caixa-cadastro{
+    width: 80%;
+    height: 10vh;
+    font-size: 120%;
+    }
+    .botao-cadastrar-se
+    {
+    width: 60%;
+    height: 10vh;
+    font-size: 130%;
+    }
 }
