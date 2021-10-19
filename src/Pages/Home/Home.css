@@ -188,8 +188,9 @@
     margin-right: 1%;
 }
 
-#items_home::-webkit-scrollbar{
-    display: none;
+#items_home button:hover{
+    color: black;
+    opacity: 50%;
 }
 
 .container-home button{
@@ -234,6 +235,7 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
+    height: 80vh;
     
 }
 

@@ -8,29 +8,47 @@ import { useRef, useState, useEffect } from "react";
 
 function Home(){
     const history = useHistory();
-    const carrossel = useRef(null);
+    const carrossel = useRef();
+    const [tempo, setTempo] = useState();
 
     const HandleLeftClick = (e) => {
-        carrossel.current.scrollLeft -= carrossel.current.offsetWidth;
+        carrossel.current.scrollLeft -= (carrossel.current.offsetWidth/2);
+        setTempo(carrossel.current.scrollLeft);
     }
 
     const HandleRightClick = (e) => {
-        /* e.preventDefault(); */
-        carrossel.current.scrollLeft += carrossel.current.offsetWidth;
+        carrossel.current.scrollLeft += (carrossel.current.offsetWidth/2);
+        setTempo(carrossel.current.scrollLeft);
 
     }
+    
+    /* useEffect(()=>{
+        setTimeout(()=>{
+            HandleRightClick();
+        }, 5000)
+    }, ) */
+
 
     return(
         <div className = "container-home"> 
             { Header() }
 
+            {
+                useEffect(()=>{
+                    setTimeout(()=>{
+                    HandleRightClick();
+                    }, 5000)
+                    
+                },[tempo])
+            }
+            
             <div className = "destaques-home"> 
                 <div className = "titulo-home">
                     <h1> Destaques </h1>
                 </div>
 
                 <div className = "carrossel_titulo">
-                        <div className = "carrossel-home">
+                        <div className = "carrossel-home" >
                             <div id = "items_wrapper_home">
                                 <div id = "items_home" ref = {carrossel}>
                                     <button onClick = {()=>{history.push("jogo1");}}>
@@ -57,7 +75,13 @@ function Home(){
                                 
                             </div>
                         
-                    </div>
+                        </div>
+
+                    {/* <div className = "controles_carousel_home">
+                        <button> 
+
+                        </button>
+                    </div> */}
 
                     <div className = "botao_passar_pro_lado">
                         <button className = "botao_left" onClick = {()=> {HandleLeftClick()}}>
@@ -251,9 +275,11 @@ function Home(){
                 <button onClick = {()=>{history.push("todos-os-jogos");}}>TODOS OS JOGOS</button>
             </div>
 
-        </div>
 
+        </div>
     );
+
+    
 }
 
 
