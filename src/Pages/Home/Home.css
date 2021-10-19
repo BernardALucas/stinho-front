@@ -239,19 +239,19 @@
 
 .botao_left img{
     transform: rotate(180deg);
-    width: 20vw;
+    width: 10vw;
 }
 
 .botao_right img{
-    width: 20vw;
+    width: 10vw;
 }
 
 .botao_left{
-    margin-right: 25vw;
+    margin-right: 30vw;
 }
 
 .botao_right{
-    margin-left: 25vw;
+    margin-left: 30vw;
 }
 
 .botao_passar_pro_lado{
