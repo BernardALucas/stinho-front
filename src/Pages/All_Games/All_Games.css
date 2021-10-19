@@ -1,48 +1,96 @@
-.container {
-    padding: 16px;
+.containerJogo {
+    padding-top: 5%;
+    padding-right:10%;
+    padding-left: 10%;
     color: #ffffff;
     font-family: 'Ruda', sans-serif;
 }
 
-.jogo {
+.seçãoJogo {
+    padding: 2%;
+    margin-bottom: 2%;
     background-color: #222222;
-    padding: 16px;
-    margin: 16px;
     border-radius: 10px;
-    height: 3in;
-
+    display: flex;
+    height: 25%;
 }
 
 .jogoFoto {
-   
-   
+    border-radius: 10px;
+    margin-left: 4%;
+    width: 30%;
+
+}
+.descriçãoJogo {
+    margin-left: 4%;
+    width: 35%;
+    
+
 }
 
+
+
 .jogoTitulo {
-    
+    font-size: xx-large;
 }
 
 .jogoDescrição {
+    font-size: medium;
+    margin-top: -3%;
     
-
+  
 }
 
-.preço {
+.botaoVejaMais {
+    font-size: medium;
+    background: #000000;
+    color: #ffffff50;
+    border-style: none;
+    border-radius: 5px;
+    height: 12%;
+    width: 30%;
+    display: inline-block;
+    bottom: 0%;
+
+}
+.botaoVejaMais:hover {
+    color: #ffffff;
+}
+
+.preçoJogo {
+    margin-left: 10%;
+    text-align: center;
+    
+    
 
 }
 
 .textoPreço {
+    font-size: large;
 
 }
 
 .valorAntigo {
+    font-size: xx-large;
+    
 
 }
 
-.b2 {
 
+
+
+.botaoComprar {
+    font-size: larger;
+    background: #3BCE3B90;
+    color: #ffffff;
+    border-style: none;
+    border-radius: 5px;
+    height: 18%;
+    width: 120%;
+    vertical-align: 0%;
 }
 
-.b1{
+.botaoComprar:hover {
+    background: #3BCE3B;
 
 }
