@@ -4,6 +4,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    width: 100vw;
 }
 
 .destaques-home{
@@ -19,10 +21,12 @@
 }
 
 .carrossel-home{
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 50%), linear-gradient(270deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 50%);
+    /* background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 50%), linear-gradient(270deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 50%); */
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100vw;
+
 }
 
 .promocao-home{
@@ -60,7 +64,6 @@
 
 .destaque1-home{
     margin-right: 52px;
-
 }
 
 .preco{
@@ -75,7 +78,7 @@
     align-items: center;
 }
 
-.desconto{
+.desconto-home{
     background-color: #3BCE3B;
     border-radius: 5px;
     width: 53px;
@@ -86,7 +89,7 @@
     justify-content: center;
 }
 
-.desconto h1{
+.desconto-home h1{
     justify-content: center;
     align-items: center;
     font-size: 12pt;
@@ -131,12 +134,13 @@
 
 .texto-jogo1-home{
     margin-left: 15px;
+
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    align-content: space-between;
 }
 
-.todos-jogos-promocao h1, h2{
+.todos-jogos-promocao h1{
     font-size: 12pt;
     text-align:start;
 }
@@ -144,10 +148,57 @@
 .todos-jogos-promocao h2{
     color:white;
     opacity: 50%;
+    font-size: 12pt;
+    text-align:start;
 }
 
 .coluna1-home{
     margin-right: 52px;
+}
+
+.botao-home{
+    margin-top: 74px;
+    margin-bottom: 111px;
+}
+
+#items_wrapper_home{
+    width: 100vw;
+}
+
+#items_home{
+    display: flex;
+    overflow-x:auto;
+
+    width: 100vw;
+
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+
+#items_home button{
+    width: 100%;
+    scroll-snap-align:center;
+
+    cursor: pointer;
+
+    background-color: transparent;
+    border: none;
+
+    margin-right: 1%;
+}
+
+#items_home::-webkit-scrollbar{
+    display: none;
+}
+
+.container-home button{
+    cursor: pointer;
+
+    background-color: transparent;
+    border: none;
+    
+    text-align: start;
 }
 
 .botao-home button{
@@ -163,13 +214,53 @@
     color: white;
 
     cursor: pointer;
+
+    text-align: center;
 }
 
 .botao-home button:hover{
     background-color: #3BCE3B;
 }
 
-.botao-home{
-    margin-top: 74px;
-    margin-bottom: 111px;
+.carrossel_titulo{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.botao_passar_pro_lado button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    
+}
+
+.botao_left img{
+    transform: rotate(180deg);
+    width: 20vw;
+}
+
+.botao_right img{
+    width: 20vw;
+}
+
+.botao_left{
+    margin-right: 25vw;
+}
+
+.botao_right{
+    margin-left: 25vw;
+}
+
+.botao_passar_pro_lado{
+    position: absolute;
+}
+
+.background_carrossel{
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 50%), linear-gradient(270deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 50%);
+    width: 100vw;
+    height: 80vh;
+    position: absolute;
 }
