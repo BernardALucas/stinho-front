@@ -101,14 +101,20 @@ input::placeholder{color: #808080;}
 }
 
 .botao-cadastrar-se{
-    width: 169px;
-    height: 58px;
-    color: #B7C1BA;
-    background: #000000;
-    border: 0.25px solid #3bce3b;
-    box-sizing: border-box;
+    border-radius: 10px;
+    border-style: solid;
+    width: 50%;
+    height: 6vh;
     font-size: 120%;
-    margin-bottom: 30px;
+
+    background-color: #121212;
+    border-color: #808080;
+
+    color: white;
+
+    cursor: pointer;
+    margin-top: 5%;
+    margin-bottom: 7%;
 
 }
 .botao-cadastrar-se:hover{
@@ -135,15 +141,24 @@ input::placeholder{color: #808080;}
         background-image: none;
         padding-top: 0%;
     }
-    .logo-cadastro{
-        size-adjust: 20%;
-    }
     .caixa-menor{
-      width: 70px ;
-      margin-right: 18px ;
+      width: 120 ;
+      margin-right: 24px ;
+      height: 10vh;
     }
     .caixa-media{
-        width: 153.5px;
-        
+        width: 168px;
+        height: 10vh;
+    }
+    .caixa-cadastro{
+    width: 80%;
+    height: 10vh;
+    font-size: 120%;
+    }
+    .botao-cadastrar-se
+    {
+    width: 60%;
+    height: 10vh;
+    font-size: 130%;
     }
 }
