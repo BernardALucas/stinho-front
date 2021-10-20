@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./cadastro.css"
+import Footer from "../../Footer";
 import { useHistory } from "react-router-dom"
 
     function Cadastro(){
@@ -7,6 +8,7 @@ import { useHistory } from "react-router-dom"
         const [email, setEmail]=useState();
         const [password, setPassword]=useState();
         return(
+        <div>
         <div className="base-cadastro"> 
             <div className="retangulo-cadastro">
                 <div className="logo-cadastro">
@@ -45,6 +47,9 @@ import { useHistory } from "react-router-dom"
                 </div>
 
             </div>
+        </div>
+        { Footer() }
+
         </div>
 
     );
