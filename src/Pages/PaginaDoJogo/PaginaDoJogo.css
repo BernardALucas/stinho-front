@@ -1,0 +1,14 @@
+.container-pagjogo{
+    background-color: #121212;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo-home{
+    margin-left: 162px;
+    margin-bottom: 30px;
+    color: white;
+    max-width: 1120px;
+}
