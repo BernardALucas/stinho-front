@@ -23,22 +23,25 @@ function Perfil() {
                 <p>Belo Horizonte, Brasil</p>{" "}
                 <p>relampagomarquinhos@cpejr.com.br</p> <p>(31) 99999-9999</p>{" "}
               </div>
-              <div className="Text_Profile">Foguete não tem ré e nem eu</div>
-            </div>
-            <div className="Button_Profile">
-              <button
-                onClick={() => {
-                  history.push("editar_perfil");
-                }}
-              >
-                Editar Perfil
-              </button>
+              <div className="Text_and_Button_Box_Profile">
+                <div className="Text_Profile">Foguete não tem ré e nem eu</div>{" "}
+                <div className="Edit_Profile_Button">
+                  {" "}
+                  <button
+                    onClick={() => {
+                      history.push("editar_perfil");
+                    }}
+                  >
+                    Editar Perfil
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
           <div className="Recent_Games_Title"> Jogos Recentes</div>
           <div className="Recent_Games">
             <img
-              className="Photo_Profile"
+              className="Game_Photo_Profile"
               src="./images/new-world-esticado.png"
               alt="Jogos Recentes"
             ></img>
@@ -49,7 +52,7 @@ function Perfil() {
           </div>
           <div className="Recent_Games">
             <img
-              className="Photo_Profile"
+              className="Game_Photo_Profile"
               src="./images/new-world-esticado.png"
               alt="Jogos Recentes"
             ></img>
@@ -60,7 +63,7 @@ function Perfil() {
           </div>
           <div className="Recent_Games">
             <img
-              className="Photo_Profile"
+              className="Game_Photo_Profile"
               src="./images/new-world-esticado.png"
               alt="Jogos Recentes"
             ></img>
@@ -82,13 +85,10 @@ function Perfil() {
         {/*Final da parte esquerda*/}
 
         <div className="Right_Wrapper">
-          <section className="Lista_de_Amigos_Estatica">
-            <div className="Titulo_Lista_Amigos"> Lista de Amigos </div>
-            <div className="Texto_Lista_Amigos">
-              {" "}
-              Você não tem nenhum amigo adicionado.{" "}
-            </div>
-          </section>
+          <div className="Static_Friend_List ">
+            <h1>Lista de Amigos</h1>
+            <p>Você não tem nenhum amigo adicionado.</p>
+          </div>
         </div>
       </div>
     </div>
