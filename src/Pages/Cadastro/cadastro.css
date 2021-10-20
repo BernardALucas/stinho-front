@@ -142,12 +142,13 @@ input::placeholder{color: #808080;}
         padding-top: 0%;
     }
     .caixa-menor{
-      width: 120 ;
-      margin-right: 24px ;
+      width: 22%;
+      margin-right: 7% ;
       height: 10vh;
+      margin-left: 10%;
     }
     .caixa-media{
-        width: 168px;
+        width: 51%;
         height: 10vh;
     }
     .caixa-cadastro{

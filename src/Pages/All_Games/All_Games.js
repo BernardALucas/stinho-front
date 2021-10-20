@@ -967,7 +967,6 @@ function All_Games(){
                 
                 
             </div>
-            <h1>All Games</h1>
             { Footer() }
         </div>
     )

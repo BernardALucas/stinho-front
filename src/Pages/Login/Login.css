@@ -1,3 +1,6 @@
+.page-login{
+    height: 100%;
+}
 .base-login{
     background-image: url("./images/jogossteam.png");
     background-repeat: no-repeat;
@@ -6,6 +9,8 @@
     align-items: center;
     justify-content: center;
     background-size: cover;
+    padding-bottom: 10%;
+    padding-top: 10%;
 }
 .logo-login{
     display: flex;
@@ -147,5 +152,10 @@ input::placeholder{color: #808080;}
     width: 70%;
     height: 10vh;
     font-size: 130%;
+    }
+}
+@media(min-height:1250px){
+    .retangulo-login{
+        height: 60%;
     }
 }
