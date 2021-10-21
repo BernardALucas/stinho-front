@@ -14,20 +14,23 @@
 }
 
 .titulo-home{
-    margin-left: 162px;
+    margin-right: 0;
+    margin-left: 12vw;
     margin-bottom: 30px;
     color: white;
     max-width: 1120px;
 }
 
 .carrossel-home{
-    /* background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 50%), linear-gradient(270deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 50%); */
+    position: relative;
+
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100vw;
 
-}
+    overflow-x: hidden;
+ }
 
 .promocao-home{
     margin-top: 85px;
@@ -90,6 +93,8 @@
 }
 
 .desconto-home h1{
+    margin: 0;
+
     justify-content: center;
     align-items: center;
     font-size: 12pt;
@@ -134,6 +139,7 @@
 
 .texto-jogo1-home{
     margin-left: 15px;
+    min-height: 181px;
 
     height: 100%;
 
@@ -165,14 +171,14 @@
 
 .items_wrapper_home{
     width: 500%;
+    overflow-x: none;
 }
 
 .items_home{
     display: flex;
-    overflow-x:hidden;
     flex-wrap: nowrap;
 
-    width: 100%;
+    max-width: 100%;
 
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
@@ -189,7 +195,6 @@
     border: none;
 
     position: relative;
-
 }
 
 .items_home button:hover{
@@ -263,30 +268,38 @@
 
 .botao_left{
     position: absolute;
-    left: 12vw;
+    width: 18vw;
+    left: 0;
+    margin-left: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+
+    background:linear-gradient(90deg, rgba(0, 0, 0, 2) 20%, rgba(0, 0, 0, 0) 95%);
+
 }
 
 .botao_right{
     position: absolute;
-    right: 12vw;
+    width: 18vw;
+    right: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background:linear-gradient(270deg, rgba(0, 0, 0, 5) 20%, rgba(0, 0, 0, 0) 95%);
 }
 
 .botao_passar_pro_lado{
     position: absolute;
+    height: 100%;
 }
 
-.background_carrossel{
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 50%), linear-gradient(270deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 50%);
-    width: 100vw;
-    height: 80vh;
-    position: absolute;
-}
 
 .preco-jogo1-home{
     bottom: 0;
 }
 
-.items_home button .text_jogo1{
-    display: flex;
-    position: absolute;
-}
