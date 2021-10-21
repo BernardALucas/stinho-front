@@ -8,39 +8,70 @@ import { useRef, useState, useEffect } from "react";
 
 function Home(){
     const history = useHistory();
-    const carrossel = useRef();
-    const [tempo, setTempo] = useState();
+    const carrossel = useRef(null);
+    const interval = useRef(null)
 
     const HandleLeftClick = (e) => {
-        carrossel.current.scrollLeft -= (carrossel.current.offsetWidth/2);
-        setTempo(carrossel.current.scrollLeft);
+        const index = carrossel.current.children.length - 1;
+        const ultima_foto = carrossel.current.children[index];
+      
+        carrossel.current.style.transition = `300ms ease-out all`;
+
+        const tamanho_slide = carrossel.current.children[0].offsetWidth;
+
+        carrossel.current.style.transform = `translateX(${tamanho_slide}px)`;
+        
+        const transicao = ()=>{
+            carrossel.current.style.transition = 'none';
+            carrossel.current.style.transform = `translateX(0)`;
+
+            carrossel.current.insertBefore(ultima_foto, carrossel.current.firstChild);
+        }
+        
+        carrossel.current.addEventListener('transitionend', transicao);
+
     }
 
     const HandleRightClick = (e) => {
-        carrossel.current.scrollLeft += (carrossel.current.offsetWidth/2);
-        setTempo(carrossel.current.scrollLeft);
+        
+        carrossel.current.style.transition = `300ms ease-out all`;
+
+        const tamanho_slide = carrossel.current.children[0].offsetWidth;
+
+        carrossel.current.style.transform = `translateX(-${tamanho_slide}px)`;
+
+        const transicao = ()=>{
+            carrossel.current.style.transition = 'none';
+            carrossel.current.style.transform = `translateX(0)`;
+
+            carrossel.current.appendChild(carrossel.current.children[0]);
+
+        }
+        
+        carrossel.current.addEventListener('transitionend', transicao);
 
     }
-    
-    /* useEffect(()=>{
-        setTimeout(()=>{
-            HandleRightClick();
-        }, 5000)
-    }, ) */
 
+    useEffect(()=>{
+        interval.current = setInterval(() => {
+            HandleRightClick();
+        }, 3000);
+
+        carrossel.current.addEventListener('mouseenter', ()=>{
+            clearInterval(interval.current);
+        });
+
+        carrossel.current.addEventListener('mouseleave', ()=>{
+            interval.current = setInterval(() => {
+                HandleRightClick();
+            }, 3000);
+        })
+    }, []);
+    
 
     return(
         <div className = "container-home"> 
             { Header() }
-
-            {
-                useEffect(()=>{
-                    setTimeout(()=>{
-                    HandleRightClick();
-                    }, 5000)
-                    
-                },[tempo])
-            }
             
             <div className = "destaques-home"> 
                 <div className = "titulo-home">
@@ -48,12 +79,12 @@ function Home(){
                 </div>
 
                 <div className = "carrossel_titulo">
-                        <div className = "carrossel-home" >
-                            <div id = "items_wrapper_home">
-                                <div id = "items_home" ref = {carrossel}>
+                        <div className = "carrossel-home">
+                            <div className = "items_wrapper_home">
+                                <div className = "items_home" ref = {carrossel}>
                                     <button onClick = {()=>{history.push("jogo1");}}>
                                         <img src="./images/new_world_logo.png" alt= "New World"></img>
-                                    </button>
+                                    </button>                                  
                                     
                                     <button onClick = {()=>{history.push("jogo2");}}>
                                         <img src="./images/new_world_logo.png" alt= "New World"></img>

@@ -135,9 +135,11 @@
 .texto-jogo1-home{
     margin-left: 15px;
 
+    height: 100%;
+
     display: flex;
     flex-direction: column;
-    align-content: space-between;
+    justify-content: space-between;
 }
 
 .todos-jogos-promocao h1{
@@ -161,22 +163,23 @@
     margin-bottom: 111px;
 }
 
-#items_wrapper_home{
-    width: 100vw;
+.items_wrapper_home{
+    width: 500%;
 }
 
-#items_home{
+.items_home{
     display: flex;
-    overflow-x:auto;
+    overflow-x:hidden;
+    flex-wrap: nowrap;
 
-    width: 100vw;
+    width: 100%;
 
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
 }
 
 
-#items_home button{
+.items_home button{
     width: 100%;
     scroll-snap-align:center;
 
@@ -185,10 +188,11 @@
     background-color: transparent;
     border: none;
 
-    margin-right: 1%;
+    position: relative;
+
 }
 
-#items_home button:hover{
+.items_home button:hover{
     color: black;
     opacity: 50%;
 }
@@ -231,29 +235,40 @@
     align-items: center;
 }
 
+.botao_passar_pro_lado{
+    pointer-events: none;
+    height: 100%;
+    width: 100%;
+}
+
 .botao_passar_pro_lado button{
     background-color: transparent;
     border: none;
     cursor: pointer;
-    height: 80vh;
+
+    pointer-events: all;
+
+    height: 100%;
     
 }
 
 .botao_left img{
     transform: rotate(180deg);
-    width: 10vw;
+    width: 4vw;
 }
 
 .botao_right img{
-    width: 10vw;
+    width: 4vw;
 }
 
 .botao_left{
-    margin-right: 30vw;
+    position: absolute;
+    left: 12vw;
 }
 
 .botao_right{
-    margin-left: 30vw;
+    position: absolute;
+    right: 12vw;
 }
 
 .botao_passar_pro_lado{
@@ -264,5 +279,14 @@
     background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 50%), linear-gradient(270deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 50%);
     width: 100vw;
     height: 80vh;
+    position: absolute;
+}
+
+.preco-jogo1-home{
+    bottom: 0;
+}
+
+.items_home button .text_jogo1{
+    display: flex;
     position: absolute;
 }
