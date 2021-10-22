@@ -24,14 +24,14 @@ function PaginaDoJogo() {
         </div>
 
         <div className="DadosJogo">
-          <div className="Desenvolvedor"> Amazon Games</div>
-          <div className="DataLançamento">28/09/2021</div>
-          <div className="Gênero">MMORPG</div>
-          <div className="Plataforma">Microsoft Windows</div>
+          <div className="Desenvolvedor">Desenvolvedor : Amazon Games</div>
+          <div className="DataLançamento">Data de Lançamento : 28/09/2021</div>
+          <div className="Genero">Gênero : MMORPG</div>
+          <div className="Plataforma">Plataforma : Microsoft Windows</div>
         </div>
 
         <div className="BotaoComprar">
-          <button>Comprar / R$29,99</button>
+          <button>COMPRAR / R$29,99</button>
         </div>
       </div>
     </div>
