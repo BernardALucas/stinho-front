@@ -10,13 +10,13 @@
 
 .destaques-home{
     width: 100%;
-    margin-top: 34px;
+    margin-top: 8vh;
 }
 
 .titulo-home{
     margin-right: 0;
     margin-left: 12vw;
-    margin-bottom: 30px;
+    margin-bottom: 4vh;
     color: white;
     max-width: 1120px;
 }
@@ -28,7 +28,9 @@
     align-items: center;
     justify-content: center;
     width: 100vw;
+    height: 70vh;
 
+    overflow-y: hidden;
     overflow-x: hidden;
  }
 
@@ -105,7 +107,7 @@
 }
 
 .todos-jogos-promocao{
-    margin-top: 57px;
+    margin-top: 8vh;
     margin-left: 162px;
     margin-right: 162px;
     display: flex;
@@ -194,6 +196,7 @@
 
 .items_home button{
     width: 100%;
+    height: 100%;
     scroll-snap-align:center;
 
     cursor: pointer;
@@ -202,6 +205,12 @@
     border: none;
 
     position: relative;
+}
+
+.items_home button img{
+    width: 75vw;
+    height: 100vh;
+    object-fit: cover;
 }
 
 .items_home button:hover{
@@ -248,9 +257,12 @@
 }
 
 .botao_passar_pro_lado{
+    position: absolute;
     pointer-events: none;
     height: 100%;
     width: 100%;
+
+    /* margin-top: 14vh; */
 }
 
 .botao_passar_pro_lado button{
@@ -300,10 +312,7 @@
     background:linear-gradient(270deg, rgba(0, 0, 0, .8) 5%, rgba(0, 0, 0, 0) 95%);
 }
 
-.botao_passar_pro_lado{
-    position: absolute;
-    height: 100%;
-}
+
 
 
 .preco-jogo1-home{
