@@ -1,10 +1,10 @@
 .logo-header{
-    margin-left: 162px;
+    margin-left: 12vw;
 }
 
 .base-header{
     display: flex;
-    width: 100%;
+    width: 100vw;
     height: 58px;
     top: 0px;
     background-color: black;
@@ -15,7 +15,7 @@
     width: 3678px;    
     height: 58px;    
     justify-content: flex-end;
-    margin-right: 162px; 
+    margin-right: 12vw; 
       
 }
 
@@ -25,7 +25,7 @@
     border-color: black;
     color: #808080;
     
-    font-size: 16pt;
+    font-size: 1rem;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     
     cursor: pointer;
@@ -46,5 +46,9 @@
 .btn-header:checked{
     border-bottom-color: #3bce3b;
 }
-    
 
+@media only screen and (max-width: 700px) {
+    .botoes-header{
+        display: none;
+    }
+  }
