@@ -1,13 +1,12 @@
 import React from "react";
-import { useHistory } from "react-router";
 import Header from "../../Header";
 import "./Home.css"
-import { useRef, useState, useEffect } from "react";
+import { useRef, useEffect } from "react";
+import Footer from "../../Footer/Footer";
 
 
 
 function Home() {
-    const history = useHistory();
     const carrossel = useRef(null);
     const interval = useRef(null)
 
@@ -82,23 +81,23 @@ function Home() {
                     <div className="carrossel-home">
                         <div className="items_wrapper_home">
                             <div className="items_home" ref={carrossel}>
-                                <button onClick={() => { history.push("jogo1"); }}>
+                                <button onClick={() => { window.location.href = "/jogo1"; }}>
                                     <img src="./images/new_world_logo.png" alt="New World"></img>
                                 </button>
 
-                                <button onClick={() => { history.push("jogo2"); }}>
+                                <button onClick={() => { window.location.href = "/jogo2"; }}>
                                     <img src="./images/new_world_logo.png" alt="New World"></img>
                                 </button>
 
-                                <button onClick={() => { history.push("jogo3"); }}>
+                                <button onClick={() => { window.location.href = "/jogo3"; }}>
                                     <img src="./images/new_world_logo.png" alt="New World"></img>
                                 </button>
 
-                                <button onClick={() => { history.push("jogo4"); }}>
+                                <button onClick={() => { window.location.href = "/jogo4"; }}>
                                     <img src="./images/new_world_logo.png" alt="New World"></img>
                                 </button>
 
-                                <button onClick={() => { history.push("jogo5"); }}>
+                                <button onClick={() => { window.location.href = "/jogo5"; }}>
                                     <img src="./images/new_world_logo.png" alt="New World"></img>
                                 </button>
 
@@ -133,7 +132,7 @@ function Home() {
 
                 {/* Divisão dos dois jogos em destaque da parte de promoções */}
                 <div className="promocao-destaque-home">
-                    <button className="destaque1-home" onClick={() => { history.push("jogo6"); }}>
+                    <button className="destaque1-home" onClick={() => { window.location.href = "/jogo6"; }}>
                         <img className="image1-home" src="./images/new-world-esticado.png" alt="New World"></img>
 
                         <div className="texto-promocao-destaque-home">
@@ -157,7 +156,7 @@ function Home() {
                         </div>
                     </button>
 
-                    <button className="destaque2-home" onClick={() => { history.push("jogo7"); }}>
+                    <button className="destaque2-home" onClick={() => { window.location.href = "/jogo7"; }}>
                         <img className="image2-home" src="./images/new-world-esticado.png" alt="New World"></img>
 
                         <div className="texto-promocao-destaque-home">
@@ -186,7 +185,7 @@ function Home() {
 
                 <div className="todos-jogos-promocao">
                     <div className="coluna1-home">
-                        <button className="jogo1-promocao-home" onClick={() => { history.push("jogo8"); }}>
+                        <button className="jogo1-promocao-home" onClick={() => { window.location.href = "/jogo8"; }}>
                             <div className="imagem-jogo1-home">
                                 <div className="desconto-home"><h1>- 49%</h1></div>
                             </div>
@@ -204,7 +203,7 @@ function Home() {
                             </div>
                         </button>
 
-                        <button className="jogo1-promocao-home" onClick={() => { history.push("jogo9"); }}>
+                        <button className="jogo1-promocao-home" onClick={() => { window.location.href = "/jogo9"; }}>
                             <div className="imagem-jogo1-home">
                                 <div className="desconto-home"><h1>- 49%</h1></div>
                             </div>
@@ -222,7 +221,7 @@ function Home() {
                             </div>
                         </button>
 
-                        <button className="jogo1-promocao-home" onClick={() => { history.push("jogo10"); }}>
+                        <button className="jogo1-promocao-home" onClick={() => { window.location.href = "/jogo10"; }}>
                             <div className="imagem-jogo1-home">
                                 <div className="desconto-home"><h1>- 49%</h1></div>
                             </div>
@@ -242,7 +241,7 @@ function Home() {
                     </div>
 
                     <div className="coluna2-home">
-                        <button className="jogo1-promocao-home" onClick={() => { history.push("jogo11"); }}>
+                        <button className="jogo1-promocao-home" onClick={() => { window.location.href = "/jogo11"; }}>
                             <div className="imagem-jogo1-home">
                                 <div className="desconto-home"><h1>- 49%</h1></div>
                             </div>
@@ -260,7 +259,7 @@ function Home() {
                             </div>
                         </button>
 
-                        <button className="jogo1-promocao-home" onClick={() => { history.push("jogo12"); }}>
+                        <button className="jogo1-promocao-home" onClick={() => { window.location.href = "/jogo12"; }}>
                             <div className="imagem-jogo1-home">
                                 <div className="desconto-home"><h1>- 49%</h1></div>
                             </div>
@@ -278,7 +277,7 @@ function Home() {
                             </div>
                         </button>
 
-                        <button className="jogo1-promocao-home" onClick={() => { history.push("jogo13"); }}>
+                        <button className="jogo1-promocao-home" onClick={() => { window.location.href = "/jogo13"; }}>
                             <div className="imagem-jogo1-home">
                                 <div className="desconto-home"><h1>- 49%</h1></div>
                             </div>
@@ -301,9 +300,10 @@ function Home() {
             </div>
 
             <div className="botao-home">
-                <button onClick={() => { history.push("allgames"); }}>TODOS OS JOGOS</button>
+                <button onClick={() => { window.location.href = "/allgames"; }}>TODOS OS JOGOS</button>
             </div>
 
+        {Footer()} 
 
         </div>
     );
