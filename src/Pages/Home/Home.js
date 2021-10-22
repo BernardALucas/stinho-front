@@ -25,6 +25,8 @@ function Home() {
             carrossel.current.style.transform = `translateX(0)`;
 
             carrossel.current.insertBefore(ultima_foto, carrossel.current.firstChild);
+
+            carrossel.current.removeEventListener('transitionend', transicao);
         }
 
         carrossel.current.addEventListener('transitionend', transicao);
@@ -44,6 +46,8 @@ function Home() {
             carrossel.current.style.transform = `translateX(0)`;
 
             carrossel.current.appendChild(carrossel.current.children[0]);
+
+            carrossel.current.removeEventListener('transitionend', transicao);
 
         }
 
