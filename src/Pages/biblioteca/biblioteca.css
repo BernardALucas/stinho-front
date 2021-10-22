@@ -1,0 +1,14 @@
+.base-biblioteca{
+    display: flex;
+    flex-direction: row;
+}
+.img-biblioteca{
+    display: flex;
+    
+    width: 229px;
+    height: 286px;
+
+}
+.img-biblioteca img{
+    padding: 20%;
+}
