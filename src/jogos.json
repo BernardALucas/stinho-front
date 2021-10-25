@@ -1,0 +1,107 @@
+[
+  {
+    "id": 1001,
+    "name": "New World" ,
+    "descricao": "Explore um MMO de mundo aberto emocionante e cheio de perigos e oportunidades, onde você irá forjar um novo destino na ilha sobrenatural de Aeternum.",
+    "price": 75.49,
+    "oldPrice": 100.00,
+    "image": "https://s2.glbimg.com/mfph7wEj223Q8Yv9rCv-Q2n2HcU=/1200x/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2021/L/B/vPI7NHTxuhC4L5lJu2ZA/new-world-key-art-easy-resize.com.jpg"
+  },
+  {
+    "id": 1002,
+    "name": "Guardiões da Galáxia da Marvel",
+    "descricao": "Você é o Senhor das Estrelas. O destino da galáxia e dos Guardiões está em suas mãos. É hora de mostrar ao universo do que você é capaz. Você consegue. Acho.",
+    "price": 299.99,
+    "oldPrice": 349.99,
+    "image": "https://cdn.ome.lt/zwy3jlAVeas9DOE3IA52leSeWdA=/1200x630/smart/extras/conteudos/guardioes_da_galaxia_da_marevl.jfif"
+  },
+  
+  { 
+    "id": 1003,
+    "name": "God of War",
+    "descricao": "Com a vingança contra os deuses do Olimpo em um passado distante, Kratos agora vive como um mortal no reino dos deuses e monstros nórdicos. É nesse mundo duro e implacável que ele deve lutar para sobreviver... e ensinar seu filho a fazer o mesmo.",
+    "price": 199.90,
+    "oldPrice": 250.00,
+    "image": "https://image.api.playstation.com/vulcan/img/rnd/202010/2217/LsaRVLF2IU2L1FNtu9d3MKLq.jpg"
+  },
+  {
+    "id": 1004,
+    "name": "Darkest Dungeon II",
+    "descricao": "Darkest Dungeon II is a roguelike road trip of the damned. Form a party, equip your stagecoach, and set off across a decaying landscape in a last gasp attempt to avert the apocalypse. The greatest dangers you face, however, may come from within...",
+    "price": 249.99,
+    "oldPrice": 400.00,
+    "image": "https://cdn1.epicgames.com/6ff9efdef6dc45ecb40ed20fcd2c4621/offer/EGS_DarkestDungeonII_RedHookStudios_S1-2560x1440-8abebbbd833c118b5e8347efdee8a222.jpg"
+  },
+  {
+    "id": 1005,
+    "name": "Riders Republic",
+    "descricao": "Entre num enorme cenário multiplayer! Radicalize esquis, prancha de snowboard ou traje planador num paraíso dos esportes de mundo aberto.",
+    "price": 249.99,
+    "oldPrice": 323.00,
+    "image": "https://cdn1.epicgames.com/83d6990f16444655866b04be562bf589/offer/MAD_STD_Store_Landscape_2560x1440-2560x1440-0d275f75a75f6367c373e727bc78b4d1.jpg"
+  },
+  {
+    "id": 2001,
+    "name": "World War Z: Aftermath",
+    "descricao": "World War Z: Aftermath é o jogo de tiro cooperativo de zumbis definitivo, e a próxima evolução do sucesso original World War Z, que já cativou mais de 15 milhões de jogadores. Lute contra hordas de zumbis esfomeados em episódios intensos através de novos locais devastados por zumbis em todo o mundo.",
+    "price": 60.79,
+    "oldPrice": 75.99,
+    "image": "https://www.ultimaficha.com.br/wp-content/uploads/2021/09/World-War-Z-aftermath.png"
+  },
+  {
+    "id": 2002,
+    "name": "The Witcher 3: Wild Hunt",
+    "descricao": "Enquanto a guerra continua nos Reinos do Norte, você assume o maior contrato de sua vida — rastrear a Criança da Profecia, uma arma viva que pode alterar o mundo.",
+    "price": 19.99,
+    "oldPrice": 99.96,
+    "image": "https://tudogeek.com.br/wp-content/uploads/2015/06/wpid-the-witcher-3-wild-hunt-game-hd-wallpaper.jpg"
+  },
+  {
+    "id": 3001,
+    "name": "Wolfenstein: The New Order",
+    "descricao": "Wolfenstein®: The New Order revitaliza a série que criou o gênero de tiro em primeira pessoa. Em uma realidade alternativa na década de 60, você descobrirá um mundo inexplorado e governado por um inimigo familiar, que conseguiu transformar os rumos da história que você conhecia.",
+    "price": 19.99,
+    "oldPrice": 49.99,
+    "image": "https://image.api.playstation.com/vulcan/ap/rnd/202009/3004/ZKYzTfaw4UrsLLt6VjYGwh5r.png"
+  },
+  {
+    "id": 3002,
+    "name": "Remnant: From the Ashes",
+    "descricao": "O mundo foi lançado no caos por um terror antigo de outra dimensão. Você, um dos últimos remanescentes da humanidade, vai enfrentar sozinho - ou acompanhado por até dois outros sobreviventes - as hordas de inimigos mortais e os chefes épicos para tentar retomar o que foi perdido.",
+    "price": 30.39,
+    "oldPrice": 75.99,
+    "image": "https://image.api.playstation.com/vulcan/ap/rnd/202007/2323/WfeYPYskUIzirzjJQgSRq7oZ.png"
+  },
+  {
+    "id": 3003,
+    "name": "Maneater",
+    "descricao": "Vivencie a maior fantasia de força como um predador alfa dos mares: um terrível TUBARÃO! Maneater é um RPG (tubaRãoPG) de ação para um jogador em mundo aberto no qual VOCÊ é o tubarão. Coma! Explore! Evolua!",
+    "price": 44.99,
+    "oldPrice": 74.99,
+    "image": "https://image.api.playstation.com/vulcan/img/cfn/11307yrvfw9UJfl3O8MiK30X3y0WujLjFxwmvOQHns32tTUYhn52rzGEre3PuHH6ggxlVfBYqktodGZt-mVOtAPncZcBjeW5.png"
+  },
+  {
+    "id": 4001,
+    "name": "HITMAN 3",
+    "descricao": "A morte está à espreita. O Agente 47 retorna em HITMAN 3, o emocionante desfecho da trilogia World of Assassination.",
+    "price": 56.99,
+    "oldPrice": 113.99,
+    "image": "https://image.api.playstation.com/vulcan/ap/rnd/202007/3011/XX85ZND1RuA13iphoE1Qb7ex.png"
+  },
+  {
+    "id": 4002,
+    "name": "Grand Theft Auto V",
+    "descricao": "O Grand Theft Auto V: Edição Premium inclui o Modo História completo do Grand Theft Auto V, Grand Theft Auto Online e todo o conteúdo e melhorias de jogo já lançados. Você também recebe o Kit Inicial de Esquema Criminal, a maneira mais rápida de começar seu império do crime no Grand Theft Auto Online.",
+    "price": 34.99,
+    "oldPrice": 69.99,
+    "image": "https://vgbr.com/wp-content/uploads/2013/10/grand-theft-auto-v-wallp-2013.jpg"
+  },
+  {
+    "id": 4003,
+    "name": "Red Dead Redemption 2",
+    "descricao": "Vencedor de mais de 175 prêmios de Jogo do Ano e avaliado com mais de 250 notas máximas, Red Dead Redemption 2 é uma história épica de honra e lealdade no alvorecer dos tempos modernos. Inclui Red Dead Redemption 2: Modo História e Red Dead Online.",
+    "price": 160.13,
+    "oldPrice": 239,
+    "image": "https://image.api.playstation.com/cdn/UP1004/CUSA03041_00/Hpl5MtwQgOVF9vJqlfui6SDB5Jl4oBSq.png"
+  }
+]
