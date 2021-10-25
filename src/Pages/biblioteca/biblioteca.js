@@ -7,15 +7,21 @@ import { useHistory } from "react-router-dom"
 
 function biblioteca(){
     return(
-        <div>
+        <div className="page-biblioteca">
             { Header() }
             <div classname="base-biblioteca">
-                <div className="img-biblioteca">
-                    <img src="/images/new_world_logo.png" alt="new_world_logo"/>
-
-                </div>
-                <div className="img-biblioteca">
-                    <img src="/images/new_world_logo.png" alt="new_world_logo"/>
+                
+                <button className="botao-jogos-biblioteca">
+                    <img src="/images/new_world_logo.png" className="img-biblioteca" alt="new_world_logo"/>
+                </button>
+                <button className="botao-jogos-biblioteca">
+                    <img src="/images/new_world_logo.png" className="img-biblioteca" alt="new_world_logo"/>
+                </button>
+                <button className="botao-jogos-biblioteca">
+                    <img src="/images/new_world_logo.png" className="img-biblioteca" alt="new_world_logo"/>
+                </button>
+ 
+                <div className="espaco-antes-do-footer">
 
                 </div>
             </div>
