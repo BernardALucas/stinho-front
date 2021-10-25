@@ -143,10 +143,9 @@
 }
 
 .todos-jogos-promocao button:hover{
-    border: #3BCE3B;
+    border-color: #3BCE3B;
     border-width: 2px;
     border-radius: 10px;
-    background-color: #3BCE3B;
 }
 
 .texto-jogo1-home h1{

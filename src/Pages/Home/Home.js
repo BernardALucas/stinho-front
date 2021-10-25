@@ -197,59 +197,6 @@ function Home() {
                                 return null;
                         })}
 
-                        {/* <button className="jogo1-promocao-home" onClick={() => { window.location.href = "/jogo8"; }}>
-                            <div className="imagem-jogo1-home">
-                                <div className="desconto-home"><h1>- 49%</h1></div>
-                            </div>
-
-                            <div className="texto-jogo1-home">
-                                <div className="titulo-jogo1-home">
-                                    <h1>Hades – Lute para sair do inferno</h1>
-                                    <h2>Supergiant Games</h2>
-                                </div>
-                                <div className="preco-jogo1-home">
-                                    <h2><s> R$69,99 </s></h2>
-                                    <h1>R$29,99</h1>
-                                </div>
-
-                            </div>
-                        </button>
-
-                        <button className="jogo1-promocao-home" onClick={() => { window.location.href = "/jogo9"; }}>
-                            <div className="imagem-jogo1-home">
-                                <div className="desconto-home"><h1>- 49%</h1></div>
-                            </div>
-
-                            <div className="texto-jogo1-home">
-                                <div className="titulo-jogo1-home">
-                                    <h1>Hades – Lute para sair do inferno</h1>
-                                    <h2>Supergiant Games</h2>
-                                </div>
-                                <div className="preco-jogo1-home">
-                                    <h2><s> R$69,99 </s></h2>
-                                    <h1>R$29,99</h1>
-                                </div>
-
-                            </div>
-                        </button>
-
-                        <button className="jogo1-promocao-home" onClick={() => { window.location.href = "/jogo10"; }}>
-                            <div className="imagem-jogo1-home">
-                                <div className="desconto-home"><h1>- 49%</h1></div>
-                            </div>
-
-                            <div className="texto-jogo1-home">
-                                <div className="titulo-jogo1-home">
-                                    <h1>Hades – Lute para sair do inferno</h1>
-                                    <h2>Supergiant Games</h2>
-                                </div>
-                                <div className="preco-jogo1-home">
-                                    <h2><s> R$69,99 </s></h2>
-                                    <h1>R$29,99</h1>
-                                </div>
-
-                            </div>
-                        </button> */}
                     </div>
 
                     <div className="coluna2-home">
@@ -282,62 +229,8 @@ function Home() {
                                 return null;
                         })}
 
-                        {/* <button className="jogo1-promocao-home" onClick={() => { window.location.href = "/jogo11"; }}>
-                            <div className="imagem-jogo1-home">
-                                <div className="desconto-home"><h1>- 49%</h1></div>
-                            </div>
-
-                            <div className="texto-jogo1-home">
-                                <div className="titulo-jogo1-home">
-                                    <h1>Hades – Lute para sair do inferno</h1>
-                                    <h2>Supergiant Games</h2>
-                                </div>
-                                <div className="preco-jogo1-home">
-                                    <h2><s> R$69,99 </s></h2>
-                                    <h1>R$29,99</h1>
-                                </div>
-
-                            </div>
-                        </button>
-
-                        <button className="jogo1-promocao-home" onClick={() => { window.location.href = "/jogo12"; }}>
-                            <div className="imagem-jogo1-home">
-                                <div className="desconto-home"><h1>- 49%</h1></div>
-                            </div>
-
-                            <div className="texto-jogo1-home">
-                                <div className="titulo-jogo1-home">
-                                    <h1>Hades – Lute para sair do inferno</h1>
-                                    <h2>Supergiant Games</h2>
-                                </div>
-                                <div className="preco-jogo1-home">
-                                    <h2><s> R$69,99 </s></h2>
-                                    <h1>R$29,99</h1>
-                                </div>
-
-                            </div>
-                        </button>
-
-                        <button className="jogo1-promocao-home" onClick={() => { window.location.href = "/jogo13"; }}>
-                            <div className="imagem-jogo1-home">
-                                <div className="desconto-home"><h1>- 49%</h1></div>
-                            </div>
-
-                            <div className="texto-jogo1-home">
-                                <div className="titulo-jogo1-home">
-                                    <h1>Hades – Lute para sair do inferno</h1>
-                                    <h2>Supergiant Games</h2>
-                                </div>
-                                <div className="preco-jogo1-home">
-                                    <h2><s> R$69,99 </s></h2>
-                                    <h1>R$29,99</h1>
-                                </div>
-
-                            </div>
-                        </button> */}
                     </div>
                 </div>
-
             </div>
 
             <div className="botao-home">
