@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Login.css";
+import Footer from "../../Footer";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useHistory } from "react-router-dom"
 
@@ -9,6 +10,7 @@ function Login(){
     const [password, setPassword]=useState();
 
     return(
+        <div className="page-login">
         <div className="base-login">
             <div className="retangulo-login">
                 <div className="voltar-login">
@@ -29,14 +31,19 @@ function Login(){
                         </div>
                         <div className="botao-logar"><button className="btn-logar">iniciar sessão</button></div>
                     </div>
-
                     <div className="cadastrar-login">
                     ainda não é cadastrado?
                     <button className="btn-login" onClick = {()=>{history.push("cadastro");}}>cadastrar-se</button>
                     </div>
+
                 </div>  
             </div>
+
+        </div>
+            { Footer() }
         </div> 
+        
+        
 
 );
 
