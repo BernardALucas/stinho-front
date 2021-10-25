@@ -1,20 +1,29 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Header from "../../Header";
 import "./Home.css"
-import { useRef, useEffect } from "react";
 import Footer from "../../Footer/Footer";
 
 
 
 function Home() {
     const carrossel = useRef(null);
-    const interval = useRef(null)
+    const interval = useRef(null);
+
+    const [data, setData] = useState([]);
+
+    useEffect(()=>{
+        fetch('http://localhost:3000/jogos.json')
+            .then((response) => response.json())
+            .then(setData);
+    }, []);
+
+    console.log(data);
 
     const HandleLeftClick = (e) => {
         const index = carrossel.current.children.length - 1;
         const ultima_foto = carrossel.current.children[index];
 
-        carrossel.current.style.transition = `300ms ease-out all`;
+        carrossel.current.style.transition = `500ms ease-out all`;
 
         const tamanho_slide = carrossel.current.children[0].offsetWidth;
 
@@ -35,7 +44,7 @@ function Home() {
 
     const HandleRightClick = (e) => {
 
-        carrossel.current.style.transition = `300ms ease-out all`;
+        carrossel.current.style.transition = `500ms ease-out all`;
 
         const tamanho_slide = carrossel.current.children[0].offsetWidth;
 
@@ -85,28 +94,20 @@ function Home() {
                     <div className="carrossel-home">
                         <div className="items_wrapper_home">
                             <div className="items_home" ref={carrossel}>
-                                <button onClick={() => { window.location.href = "/jogo1"; }}>
-                                    <img src="./images/new_world_logo.png" alt="New World"></img>
-                                </button>
+                            {data.map((item_carrossel) => {
+                                const {id, name, price, oldPrice, image} = item_carrossel;
 
-                                <button onClick={() => { window.location.href = "/jogo2"; }}>
-                                    <img src="./images/new_world_logo.png" alt="New World"></img>
-                                </button>
-
-                                <button onClick={() => { window.location.href = "/jogo3"; }}>
-                                    <img src="./images/new_world_logo.png" alt="New World"></img>
-                                </button>
-
-                                <button onClick={() => { window.location.href = "/jogo4"; }}>
-                                    <img src="./images/new_world_logo.png" alt="New World"></img>
-                                </button>
-
-                                <button onClick={() => { window.location.href = "/jogo5"; }}>
-                                    <img src="./images/new_world_logo.png" alt="New World"></img>
-                                </button>
-
+                                console.log(id);
+                                if((id - 1000) < 1000)
+                                    return(
+                                            <button onClick={() => { window.location.href = id; }}>
+                                                <img src={image} alt={name}></img>
+                                            </button>                                       
+                                    );
+                                    else
+                                        return null;
+                            })}
                             </div>
-
                         </div>
 
                         <div className="botao_passar_pro_lado">
@@ -120,14 +121,7 @@ function Home() {
                         </div>
 
                     </div>
-
-
-
-
-
                 </div>
-
-
             </div>
 
             {/* Início da seção de promoções */}
@@ -136,60 +130,74 @@ function Home() {
 
                 {/* Divisão dos dois jogos em destaque da parte de promoções */}
                 <div className="promocao-destaque-home">
-                    <button className="destaque1-home" onClick={() => { window.location.href = "/jogo6"; }}>
-                        <img className="image1-home" src="./images/new-world-esticado.png" alt="New World"></img>
+                    {data.map((destaque_home)=>{
+                        const {id, name, price, oldPrice, image} = destaque_home;
+                        
+                        if((id - 2000) < 1000 && (id - 2000)>0)
+                        return(
+                            <button className="destaque1-home" onClick={() => { window.location.href = id; }}>
+                                <img className="image1-home" src= {image} alt={name}></img>
 
-                        <div className="texto-promocao-destaque-home">
-                            <div className="texto-promocao-destaque-jogo1">
-                                <h1>Hades – Lute para sair do inferno</h1>
-                                <h2>Supergiant Games</h2>
+                                <div className="texto-promocao-destaque-home">
+                                    <div className="texto-promocao-destaque-jogo1">
+                                        <h1>{name}</h1>
+                                        <h2>Supergiant Games</h2> {/* ADICIONAR MONTADORA DO JOGO */}
 
-                                <div className="conjunto-preco-destaque">
+                                        <div className="conjunto-preco-destaque">
 
-                                    <div className="desconto-home">
-                                        <h1>- 57%</h1>
+                                            <div className="desconto-destaque-home">
+                                                <h1>- {Math.round((1 - (price/oldPrice))*100)}%</h1>
+                                            </div>
+
+                                            <div className="preco">
+                                                <h2><s> R${oldPrice} </s></h2>
+                                                <h1>R${price}</h1>
+                                            </div>
+
+                                        </div>
                                     </div>
-
-                                    <div className="preco">
-                                        <h2><s> R$69,99 </s></h2>
-                                        <h1>R$29,99</h1>
-                                    </div>
-
                                 </div>
-                            </div>
-                        </div>
-                    </button>
+                            </button>
+                        );
 
-                    <button className="destaque2-home" onClick={() => { window.location.href = "/jogo7"; }}>
-                        <img className="image2-home" src="./images/new-world-esticado.png" alt="New World"></img>
-
-                        <div className="texto-promocao-destaque-home">
-                            <div className="texto-promocao-destaque-jogo1">
-                                <h1>Hades – Lute para sair do inferno</h1>
-                                <h2>Supergiant Games</h2>
-
-                                <div className="conjunto-preco-destaque">
-
-                                    <div className="desconto-home">
-                                        <h1> - 57%</h1>
-                                    </div>
-
-                                    <div className="preco">
-                                        <h2><s> R$69,99 </s></h2>
-                                        <h1>R$29,99</h1>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
-                    </button>
+                    else 
+                        return null;
+                    })}
 
                 </div>
 
                 <div className="todos-jogos-promocao">
                     <div className="coluna1-home">
-                        <button className="jogo1-promocao-home" onClick={() => { window.location.href = "/jogo8"; }}>
+                        {data.map((jogos_promocao) => {
+                            const {id, name, price, oldPrice, image} = jogos_promocao;
+                            
+                            if((id - 3000) < 1000 && (id - 3000)>0)
+                                return(
+                                    <button className="jogo1-promocao-home" onClick={() => { window.location.href = id; }}>
+                                        <div className="imagem-jogo1-home">
+                                            <img src={image} alt = {name} />
+                                            <div className="desconto-home"><h1>- {Math.round((1 - (price/oldPrice))*100)}%</h1></div>
+                                        </div>
+
+                                        <div className="texto-jogo1-home">
+                                            <div className="titulo-jogo1-home">
+                                                <h1>{name}</h1>
+                                                <h2>Supergiant Games</h2> {/* COLOCAR MONTADORA */}
+                                            </div>
+                                            <div className="preco-jogo1-home">
+                                                <h2><s> R${oldPrice} </s></h2>
+                                                <h1>R${price}</h1>
+                                            </div>
+
+                                        </div>
+                                    </button>
+                                );
+
+                            else 
+                                return null;
+                        })}
+
+                        {/* <button className="jogo1-promocao-home" onClick={() => { window.location.href = "/jogo8"; }}>
                             <div className="imagem-jogo1-home">
                                 <div className="desconto-home"><h1>- 49%</h1></div>
                             </div>
@@ -241,11 +249,40 @@ function Home() {
                                 </div>
 
                             </div>
-                        </button>
+                        </button> */}
                     </div>
 
                     <div className="coluna2-home">
-                        <button className="jogo1-promocao-home" onClick={() => { window.location.href = "/jogo11"; }}>
+                    {data.map((jogos_promocao) => {
+                            const {id, name, price, oldPrice, image} = jogos_promocao;
+                            
+                            if((id - 4000) < 1000 && (id - 4000)>0)
+                                return(
+                                    <button className="jogo1-promocao-home" onClick={() => { window.location.href = id; }}>
+                                        <div className="imagem-jogo1-home">
+                                            <img src={image} alt = {name} />
+                                            <div className="desconto-home"><h1>- {Math.round((1 - (price/oldPrice))*100)}%</h1></div>
+                                        </div>
+
+                                        <div className="texto-jogo1-home">
+                                            <div className="titulo-jogo1-home">
+                                                <h1>{name}</h1>
+                                                <h2>Supergiant Games</h2> {/* COLOCAR MONTADORA */}
+                                            </div>
+                                            <div className="preco-jogo1-home">
+                                                <h2><s> R${oldPrice} </s></h2>
+                                                <h1>R${price}</h1>
+                                            </div>
+
+                                        </div>
+                                    </button>
+                                );
+
+                            else 
+                                return null;
+                        })}
+
+                        {/* <button className="jogo1-promocao-home" onClick={() => { window.location.href = "/jogo11"; }}>
                             <div className="imagem-jogo1-home">
                                 <div className="desconto-home"><h1>- 49%</h1></div>
                             </div>
@@ -297,7 +334,7 @@ function Home() {
                                 </div>
 
                             </div>
-                        </button>
+                        </button> */}
                     </div>
                 </div>
 
