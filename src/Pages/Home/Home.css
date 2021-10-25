@@ -4,26 +4,35 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    width: 100vw;
 }
 
 .destaques-home{
     width: 100%;
-    margin-top: 34px;
+    margin-top: 8vh;
 }
 
 .titulo-home{
-    margin-left: 162px;
-    margin-bottom: 30px;
+    margin-right: 0;
+    margin-left: 12vw;
+    margin-bottom: 4vh;
     color: white;
     max-width: 1120px;
 }
 
 .carrossel-home{
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 50%), linear-gradient(270deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 50%);
+    position: relative;
+
     display: flex;
     align-items: center;
     justify-content: center;
-}
+    width: 100vw;
+    height: 70vh;
+
+    overflow-y: hidden;
+    overflow-x: hidden;
+ }
 
 .promocao-home{
     margin-top: 85px;
@@ -60,7 +69,6 @@
 
 .destaque1-home{
     margin-right: 52px;
-
 }
 
 .preco{
@@ -75,7 +83,7 @@
     align-items: center;
 }
 
-.desconto{
+.desconto-home{
     background-color: #3BCE3B;
     border-radius: 5px;
     width: 53px;
@@ -86,7 +94,9 @@
     justify-content: center;
 }
 
-.desconto h1{
+.desconto-home h1{
+    margin: 0;
+
     justify-content: center;
     align-items: center;
     font-size: 12pt;
@@ -97,11 +107,18 @@
 }
 
 .todos-jogos-promocao{
-    margin-top: 57px;
-    margin-left: 162px;
-    margin-right: 162px;
+    margin-top: 8vh;
+    margin-left: 12vw;
+    margin-right: 12vw;
     display: flex;
     justify-content: space-between;
+}
+
+.todos-jogos-promocao button:hover{
+    border: #3BCE3B;
+    border-width: 2px;
+    border-radius: 10px;
+    background-color: #3BCE3B;
 }
 
 .texto-jogo1-home h1{
@@ -131,12 +148,16 @@
 
 .texto-jogo1-home{
     margin-left: 15px;
+    min-height: 181px;
+
+    height: 100%;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.todos-jogos-promocao h1, h2{
+.todos-jogos-promocao h1{
     font-size: 12pt;
     text-align:start;
 }
@@ -144,10 +165,66 @@
 .todos-jogos-promocao h2{
     color:white;
     opacity: 50%;
+    font-size: 12pt;
+    text-align:start;
 }
 
 .coluna1-home{
     margin-right: 52px;
+}
+
+.botao-home{
+    margin-top: 74px;
+    margin-bottom: 111px;
+}
+
+.items_wrapper_home{
+    width: 500%;
+    overflow-x: none;
+}
+
+.items_home{
+    display: flex;
+    flex-wrap: nowrap;
+
+    max-width: 100%;
+
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+
+.items_home button{
+    width: 100%;
+    height: 100%;
+    scroll-snap-align:center;
+
+    cursor: pointer;
+
+    background-color: transparent;
+    border: none;
+
+    position: relative;
+}
+
+.items_home button img{
+    width: 75vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.items_home button:hover{
+    color: black;
+    opacity: 50%;
+}
+
+.container-home button{
+    cursor: pointer;
+
+    background-color: transparent;
+    border: none;
+    
+    text-align: start;
 }
 
 .botao-home button{
@@ -163,13 +240,93 @@
     color: white;
 
     cursor: pointer;
+
+    text-align: center;
 }
 
 .botao-home button:hover{
     background-color: #3BCE3B;
 }
 
-.botao-home{
-    margin-top: 74px;
-    margin-bottom: 111px;
+.carrossel_titulo{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
 }
+
+.botao_passar_pro_lado{
+    position: absolute;
+    pointer-events: none;
+    height: 100%;
+    width: 100%;
+
+    /* margin-top: 14vh; */
+}
+
+.botao_passar_pro_lado button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    pointer-events: all;
+
+    height: 100%;
+    
+}
+
+.botao_left img{
+    transform: rotate(180deg);
+    width: 4vw;
+}
+
+.botao_right img{
+    width: 4vw;
+}
+
+.botao_left{
+    position: absolute;
+    width: 18vw;
+    left: 0;
+    margin-left: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+
+    background:linear-gradient(90deg, rgba(0, 0, 0, .8) 5%, rgba(0, 0, 0, 0) 95%);
+
+}
+
+.botao_right{
+    position: absolute;
+    width: 18vw;
+    right: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background:linear-gradient(270deg, rgba(0, 0, 0, .8) 5%, rgba(0, 0, 0, 0) 95%);
+}
+
+
+
+
+.preco-jogo1-home{
+    bottom: 0;
+}
+
+@media only screen and (max-width: 1054px) {
+    .todos-jogos-promocao{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .coluna1-home{
+        margin-right: 0;
+    }
+  }
