@@ -17,8 +17,6 @@ function Home() {
             .then(setData);
     }, []);
 
-    console.log(data);
-
     const HandleLeftClick = (e) => {
         const index = carrossel.current.children.length - 1;
         const ultima_foto = carrossel.current.children[index];
@@ -95,7 +93,7 @@ function Home() {
                         <div className="items_wrapper_home">
                             <div className="items_home" ref={carrossel}>
                             {data.map((item_carrossel) => {
-                                const {id, name, price, oldPrice, image} = item_carrossel;
+                                const {id, name, price, oldPrice, image, desenvolvedor, genero} = item_carrossel;
 
                                 console.log(id);
                                 if((id - 1000) < 1000)
@@ -131,7 +129,7 @@ function Home() {
                 {/* Divisão dos dois jogos em destaque da parte de promoções */}
                 <div className="promocao-destaque-home">
                     {data.map((destaque_home)=>{
-                        const {id, name, price, oldPrice, image} = destaque_home;
+                        const {id, name, price, oldPrice, image,desenvolvedor, genero} = destaque_home;
                         
                         if((id - 2000) < 1000 && (id - 2000)>0)
                         return(
@@ -141,7 +139,7 @@ function Home() {
                                 <div className="texto-promocao-destaque-home">
                                     <div className="texto-promocao-destaque-jogo1">
                                         <h1>{name}</h1>
-                                        <h2>Supergiant Games</h2> {/* ADICIONAR MONTADORA DO JOGO */}
+                                        <h2>{desenvolvedor}</h2> {/* ADICIONAR MONTADORA DO JOGO */}
 
                                         <div className="conjunto-preco-destaque">
 
@@ -169,7 +167,7 @@ function Home() {
                 <div className="todos-jogos-promocao">
                     <div className="coluna1-home">
                         {data.map((jogos_promocao) => {
-                            const {id, name, price, oldPrice, image} = jogos_promocao;
+                            const {id, name, price, oldPrice, image, desenvolvedor, genero} = jogos_promocao;
                             
                             if((id - 3000) < 1000 && (id - 3000)>0)
                                 return(
@@ -182,7 +180,7 @@ function Home() {
                                         <div className="texto-jogo1-home">
                                             <div className="titulo-jogo1-home">
                                                 <h1>{name}</h1>
-                                                <h2>Supergiant Games</h2> {/* COLOCAR MONTADORA */}
+                                                <h2>{desenvolvedor}</h2> {/* COLOCAR MONTADORA */}
                                             </div>
                                             <div className="preco-jogo1-home">
                                                 <h2><s> R${oldPrice} </s></h2>
@@ -201,7 +199,7 @@ function Home() {
 
                     <div className="coluna2-home">
                     {data.map((jogos_promocao) => {
-                            const {id, name, price, oldPrice, image} = jogos_promocao;
+                            const {id, name, price, oldPrice, image, desenvolvedor, genero} = jogos_promocao;
                             
                             if((id - 4000) < 1000 && (id - 4000)>0)
                                 return(
@@ -214,7 +212,7 @@ function Home() {
                                         <div className="texto-jogo1-home">
                                             <div className="titulo-jogo1-home">
                                                 <h1>{name}</h1>
-                                                <h2>Supergiant Games</h2> {/* COLOCAR MONTADORA */}
+                                                <h2>{desenvolvedor}</h2> {/* COLOCAR MONTADORA */}
                                             </div>
                                             <div className="preco-jogo1-home">
                                                 <h2><s> R${oldPrice} </s></h2>

@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../../Header";
 import Footer from "../../Footer";
 import "./All_Games.css";
 
 
 function All_Games(){
+    const [data, setData] = useState([]);
+
+    useEffect(()=>{
+        fetch('http://localhost:3000/jogos.json')
+            .then((response) => response.json())
+            .then(setData);
+    }, []);
+
+
     return(
         <div>
             { Header() }
