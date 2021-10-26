@@ -46,9 +46,26 @@
 .btn-header:checked{
     border-bottom-color: #3bce3b;
 }
+.btn-drawer-header{
+    display: none;
+}
+.menu-header Dropdown.Menu{
+    color: black;
+    background-color: black;
+}
+.super-colors{
+    color: #000000;
+    background-color: black;
+}
 
 @media only screen and (max-width: 700px) {
     .botoes-header{
         display: none;
+    }
+    .btn-drawer-header{
+        display: block;
+        position: absolute;
+        right: 12vw;
+        top: 2.5vw;
     }
   }
