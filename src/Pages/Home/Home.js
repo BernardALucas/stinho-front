@@ -94,8 +94,7 @@ function Home() {
                             <div className="items_home" ref={carrossel}>
                             {data.map((item_carrossel) => {
                                 const {id, name, price, oldPrice, image, desenvolvedor, genero} = item_carrossel;
-
-                                console.log(id);
+                                
                                 if((id - 1000) < 1000)
                                     return(
                                             <button onClick={() => { window.location.href = id; }}>
