@@ -6,6 +6,10 @@
     font-family: 'Ruda', sans-serif;
 }
 
+.filtro_all_games{
+    margin-bottom: 2vw;
+}
+
 .seçãoJogo {
     padding: 2%;
     margin-bottom: 2%;
@@ -19,9 +23,12 @@
 .jogoFoto {
     border-radius: 10px;
     margin-left: 2%; 
-    width: 30%;
+    width: 25vw;
+    height: 12vw;
+    
 
 }
+
 .descriçãoJogo {
     margin-left: 5%;
     width: 40%;
