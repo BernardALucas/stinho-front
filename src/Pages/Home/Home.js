@@ -196,7 +196,7 @@ function Home() {
 
                     </div>
 
-                    <div className="coluna2-home">
+                    <div className="coluna1-home">
                     {data.map((jogos_promocao) => {
                             const {id, name, price, oldPrice, image, desenvolvedor, genero} = jogos_promocao;
                             
