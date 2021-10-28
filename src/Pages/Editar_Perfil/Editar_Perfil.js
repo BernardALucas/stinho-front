@@ -25,11 +25,13 @@ function Editar_Perfil() {
               <input
                 className="Text_Box_Nome_Editar_Perfil"
                 placeholder="Nome:"
+                onChange={(e)=> setNome(e.target.value)}
               ></input>
 
               <input
                 className="Text_Box_Resumo_Editar_Perfil"
                 placeholder="Resumo:"
+                onChange={(e)=> setResumo(e.target.value)}
               ></input>
             </div>
             <div className="Mudar_Foto_Perfil">
@@ -48,6 +50,7 @@ function Editar_Perfil() {
                   <input
                     className="Text_Box_Email_Editar_Perfil"
                     placeholder="E-mail:"
+                    onChange={(e)=> setEmail(e.target.value)}
                   ></input>
                 </div>
               </div>
@@ -55,6 +58,7 @@ function Editar_Perfil() {
                 <input
                   className="Text_Box_Telefone_Editar_Perfil"
                   placeholder="Telefone:"
+                  onChange={(e)=> setTelefone(e.target.value)}
                 ></input>
               </div>
               <div className="Barra_Verde_Estética"></div>
@@ -65,12 +69,14 @@ function Editar_Perfil() {
                   <input
                     className="Text_Box_País_Editar_Perfil"
                     placeholder="País:"
+                    onChange={(e)=> setPais(e.target.value)}
                   ></input>
                 </div>
                 <div className="Caixa_Mudança">
                   <input
                     className="Text_Box_Estado_Editar_Perfil"
                     placeholder="Estado:"
+                    onChange={(e)=> setEstado(e.target.value)}
                   ></input>
                 </div>
               </div>
@@ -78,6 +84,7 @@ function Editar_Perfil() {
                 <input
                   className="Text_Box_Cidade_Editar_Perfil"
                   placeholder="Cidade:"
+                  onChange={(e)=> setCidade(e.target.value)}
                 ></input>
 
                 <div className="Mudar_Bairro">
@@ -86,6 +93,7 @@ function Editar_Perfil() {
                     <input
                       className="Text_Box_Bairro_Editar_Perfil"
                       placeholder="Bairro:"
+                      onChange={(e)=> setBairro(e.target.value)}
                     ></input>
                   </div>
                 </div>
@@ -96,6 +104,7 @@ function Editar_Perfil() {
                   <input
                     className="Text_Box_Rua_Editar_Perfil"
                     placeholder="Rua:"
+                    onChange={(e)=> setRua(e.target.value)}
                   ></input>
                 </div>
               </div>
@@ -105,13 +114,14 @@ function Editar_Perfil() {
                   <input
                     className="Text_Box_Numero_Editar_Perfil"
                     placeholder="Número:"
+                    onChange={(e)=> setNumero(e.target.value)}
                   ></input>
                 </div>
               </div>
             </div>
             </div>
             <div className="Barra_Verde_Estética"></div>
-            <button className="Botão_Confirmar_Alterações">
+            <button className="Botão_Confirmar_Alterações" onClick={handleSubmit}>
               Confirmar Alterações
             </button>
           </div>
