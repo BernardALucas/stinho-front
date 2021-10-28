@@ -1,8 +1,23 @@
-import React from "react";
+import React,{useState} from "react";
 import "./Editar_Perfil.css";
 import Header from "../../Header";
 
+
+function handleSubmit(){
+  
+}
+
 function Editar_Perfil() {
+    const [nome, setNome]=useState();
+    const [resumo, setResumo]=useState();
+    const [email, setEmail]=useState();
+    const [telefone, setTelefone]=useState();
+    const [pais, setPais]=useState();
+    const [estado, setEstado]=useState();
+    const [cidade, setCidade]=useState();
+    const [bairro, setBairro]=useState();
+    const [rua, setRua]=useState();
+    const [numero, setNumero]=useState();
   return (
     <div>
       <div Header>{Header()}</div>
