@@ -1,214 +1,274 @@
 /* Toda a página*/
-.Container_Editar_Perfil{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    padding-left: 12%;
-    padding-right: 12%;
-    padding-top: 2%;
-   
+.Container_Editar_Perfil {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding-left: 12%;
+  padding-right: 12%;
+  padding-top: 2%;
 }
-
 
 /*Parte superior da página, contendo foto de perfil e nome */
-.Parte_de_Cima_Editar_Perfil{
-    width: 100%;
-    height: 20%;
-
+.Parte_de_Cima_Editar_Perfil {
+  width: 100%;
+  height: 20%;
 }
-.Dados_Editar_Perfil{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 100%;
-    background-color: #323232;
-    padding-bottom: 2%;
-    padding-left:2%;
-    padding-top: 2%;
-    border-radius: 0.1cm;
+.Dados_Editar_Perfil {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  background-color: #323232;
+  padding-bottom: 2%;
+  padding-left: 2%;
+  padding-top: 2%;
+  border-radius: 0.1cm;
 }
-.Foto_Editar_Perfil{
-    width: 15%;
-    height: 100%;
-    border-radius: 0.1cm;
+.Foto_Editar_Perfil {
+  width: 15%;
+  height: 100%;
+  border-radius: 0.1cm;
 }
-.Nome_Dados_Editar_Perfil{
-    font-size: 0.7cm;
-    color: white;
-    padding-left: 2%;
-
+.Nome_Dados_Editar_Perfil {
+  font-size: 0.7cm;
+  color: white;
+  padding-left: 2%;
 }
 
 /*Parte de baixo do perfil, dividido em 2 partes*/
-.Parte_de_Baixo_Editar_Perfil{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 80%;
-
+.Parte_de_Baixo_Editar_Perfil {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 80%;
 }
-
 
 /* Lado esquerdo do perfil */
-.Lado_Esquerdo_Editar_Perfil{
-    width: 50%;
-    height: 100%;
-    padding-top: 5%;
+.Lado_Esquerdo_Editar_Perfil {
+  width: 50%;
+  height: 100%;
+  padding-top: 5%;
 }
 /*Mudar texto dentro de <h1> no lado esquerdo*/
-.Lado_Esquerdo_Editar_Perfil h1{
-    color: #808080;
-    text-align: center;
-    font-size: 0.38cm;
-    margin-top: 2%;
-    margin-left: 26%;
+.Lado_Esquerdo_Editar_Perfil h1 {
+  color: #808080;
+  text-align: center;
+  font-size: 0.38cm;
+  margin-top: 2%;
+  margin-left: 26%;
 }
-.Escrita_Esquerda{
-    color: white;
-    font-size: 0.7cm;
-    padding-bottom: 2%;
+.Text_Box_Nome_Editar_Perfil {
+  background-color: #323232;
+  color: white;
+  border-radius: 0.1cm;
+  border-style: hidden;
+  width: 100%;
+  height: 35px;
+  padding-left: 3%;
+  font-size: 0.5cm;
 }
-.Text_Box_Editar_Perfil{
-    background-color: #323232;
-    color: white;
-    border-radius: 0.1cm;
-    border-style: hidden;
-    width: 100%;
-    height:30px;
-    padding-left: 3%;
+.Text_Box_Resumo_Editar_Perfil {
+  margin-top: 5%;
+  background-color: #323232;
+  color: white;
+  border-radius: 0.1cm;
+  border-style: hidden;
+  width: 100%;
+  height: 35px;
+  padding-left: 3%;
+  font-size: 0.5cm;
 }
-.Mudar_Foto_Perfil{
-    margin-top: 5%;
-    display: flex;
-    flex-direction: row;
-}
-.Mudar_Avatar{
-    align-items: center;
-    justify-content: center;
-    margin-left: 20%;
-    margin-top: 1.9%;
-    width:50%;
-    height: 20%;
-    background: #121212;
-    border: 0.25px solid #B7C1BA;
-    box-sizing: border-box;
-    color: white;
-    border-radius: 3px;
-    font-size:0.5cm;
 
+.Escrita_Avatar {
+  color: white;
+  font-size: 0.7cm;
+  font-weight: bold;
+  padding-bottom: 2%;
 }
-.Mudar_Avatar:hover{
-    background: #3BCE3B;
-    color: #000000;
-    border: 0.25px solid #000000;
+.Text_Box_Editar_Perfil {
+  background-color: #323232;
+  color: white;
+  border-radius: 0.1cm;
+  border-style: hidden;
+  width: 100%;
+  height: 30px;
+  padding-left: 3%;
 }
+.Mudar_Foto_Perfil {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: row;
+}
+.Mudar_Avatar {
+  align-items: center;
+  justify-content: center;
+  margin-left: 20%;
+  margin-top: 1.9%;
+  width: 50%;
+  height: 20%;
+  background: #121212;
+  border: 0.25px solid #b7c1ba;
+  box-sizing: border-box;
+  color: white;
+  border-radius: 3px;
+  font-size: 0.5cm;
+}
+.Mudar_Avatar:hover {
+  background: #3bce3b;
+  color: #000000;
+  border: 0.25px solid #000000;
+}
+
 /*Lado direito do perfil*/
-.Lado_Direito_Editar_Perfil{
-    width: 50%;
-    height: 100%;
-    padding-top: 5%;
-    padding-left: 3%;
-
+.Lado_Direito_Editar_Perfil {
+  width: 50%;
+  height: 100%;
+  padding-top: 5%;
+  padding-left: 3%;
 }
-.Escrita_Direita{
-    color: white;
-    font-size: 0.7cm;
-    padding-bottom: 1%;
-    padding-top: 1%;
-}
-.Escrita_Direita_Inferior{
-    color: white;
-    font-size: 0.6cm;
-
-}
-.Mudar_Email{
-    display: flex;
-    flex-direction: row;
-}
-.Caixa_Mudança{
-    width: 100%;
-    padding-left: 1%;
-
-}
-.Mudar_Telefone{
-    padding-top: 2%;
-    display: flex;
-    flex-direction: row;
-    padding-bottom: 2%;
-}
-.País_Estado{
-    display: flex;
-    flex-direction: row;
-
+.Escrita_Direita {
+  color: white;
+  font-size: 0.7cm;
+  padding-bottom: 1%;
+  padding-top: 1%;
+  font-weight: bold;
 }
 
-.Mudar_País{
-    display: flex;
-    flex-direction: row;
-    margin-right: 2%;
-
-}
-.Mudar_Estado{
-    display: flex;
-    flex-direction: row;
-    
-}
-.Mudar_Cidade{
-    display: flex;
-    flex-direction: row;    
-    padding-top: 2%;
-    
-}
-.Mudar_Bairro{
-    display: flex;
-    flex-direction: row;
-    padding-top: 2%;
-}
-.Mudar_Rua{
-    padding-top: 2%;
-    display: flex;
-    flex-direction: row;
-}
-.Mudar_Numero{
-    padding-top: 2%;
-    display: flex;
-    flex-direction: row;
-    padding-bottom: 2%;
-    
-}
-.Botão_Confirmar_Alterações{
-    margin-top: 4%;
-    align-items: center;
-    justify-content: center;
-    margin-left: 16%;
-    width: 70%;
-    height: 30%;
-    font-size: 0.55cm;
-    border-radius: 0.1cm;
-    border-color:#3bce3b;
-    background-color: #121212;
-    color: white; 
-    border: 0.25px solid #B7C1BA;
-    margin-bottom:2%;
-
-  }
-  .Botão_Confirmar_Alterações:hover{
-    background: #3BCE3B;
-    color: #000000;
-    border: 0.25px solid #000000;
-    margin-bottom: ;
-}
-.Barra_Verde_Estética{
-    background-color:#3bce3b;
-    color: #3bce3b;
-    height: 1px;
-    width: 100%;
+.Text_Box_Email_Editar_Perfil {
+  background-color: #323232;
+  color: white;
+  border-radius: 0.1cm;
+  border-style: hidden;
+  width: 100%;
+  height: 30px;
+  padding-left: 3%;
 }
 
-@media (max-width:1030px){
-    .Parte_de_Baixo_Editar_Perfil{
-        display:flex;
-        flex-direction: column;
-    }
+.Caixa_Mudança {
+  width: 100%;
+}
+.Text_Box_Telefone_Editar_Perfil {
+  background-color: #323232;
+  color: white;
+  border-radius: 0.1cm;
+  border-style: hidden;
+  width: 100%;
+  height: 30px;
+  padding-left: 5.5%;
+}
+
+.Mudar_Telefone {
+  width: 40%;
+  margin-top: 2%;
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 2%;
+}
+/*/////////////////////////////////////////*/
+.País_Estado {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 2%;
+  margin-bottom: 2%;
+}
+.Text_Box_País_Editar_Perfil {
+  background-color: #323232;
+  color: white;
+  border-radius: 0.1cm;
+  border-style: hidden;
+  width: 100%;
+  height: 30px;
+  padding-left: 5.5%;
+}
+.Text_Box_Estado_Editar_Perfil {
+  background-color: #323232;
+  color: white;
+  border-radius: 0.1cm;
+  border-style: hidden;
+  width: 100%;
+  height: 30px;
+  padding-left: 5.5%;
+}
+/*//////////////////////////////////*/
+.Cidade_Bairro {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 2%;
+  margin-bottom: 2%;
+}
+
+.Text_Box_Cidade_Editar_Perfil {
+  background-color: #323232;
+  color: white;
+  border-radius: 0.1cm;
+  border-style: hidden;
+  width: 60%;
+  height: 30px;
+  padding-left: 2.5%;
+}
+.Text_Box_Bairro_Editar_Perfil {
+  background-color: #323232;
+  color: white;
+  border-radius: 0.1cm;
+  border-style: hidden;
+  width: 100%;
+  height: 30px;
+  padding-left: 5.5%;
+}
+/*///////////////////////////////////////////////////*/
+.Rua_Numero {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 2%;
+  margin-bottom: 2%;
+}
+.Text_Box_Rua_Editar_Perfil {
+  background-color: #323232;
+  color: white;
+  border-radius: 0.1cm;
+  border-style: hidden;
+  width: 120%;
+  height: 30px;
+  padding-left: 5.5%;
+}
+.Text_Box_Numero_Editar_Perfil {
+  background-color: #323232;
+  color: white;
+  border-radius: 0.1cm;
+  border-style: hidden;
+  height: 30px;
+  padding-left: 5.5%;
+  width: 106.5%;
+  margin-left: 19.5%;
+}
+
+.Botão_Confirmar_Alterações {
+  margin-top: 4%;
+  align-items: center;
+  justify-content: center;
+  margin-left: 16%;
+  width: 70%;
+  height: 30%;
+  font-size: 0.55cm;
+  border-radius: 0.1cm;
+  border-color: #3bce3b;
+  background-color: #121212;
+  color: white;
+  border: 0.25px solid #b7c1ba;
+  margin-bottom: 2%;
+}
+.Botão_Confirmar_Alterações:hover {
+  background: #3bce3b;
+  color: #000000;
+  border: 0.25px solid #000000;
+}
+.Barra_Verde_Estética {
+  background-color: #3bce3b;
+  color: #3bce3b;
+  height: 1px;
+  width: 100%;
 }

@@ -4,6 +4,7 @@ import "./Perfil.css";
 //import Footer from "../../Footer/Footer";
 import { useHistory } from "react-router-dom";
 
+
 function Perfil() {
   const history = useHistory();
   return (
@@ -12,20 +13,17 @@ function Perfil() {
       <div className="Container_Profile">
         <div className="Left_Wrapper_Profile">
           <div className="Data_Profile">
-            <img
-              className="Photo_Profile"
-              src="./images/Foto_Perfil.png"
-              alt="Foto Perfil"
-            ></img>
+            <img className="Photo_Profile" src="./images/Foto_Perfil.png" alt="Foto Perfil"></img>
+
             <div className="Info_User_Profile">
               <div className="Username_Profile"> Relâmpago Marquinhos</div>
               <div className="Userdata_Profile">
                 <p>Belo Horizonte, Brasil</p>{" "}
                 <p>relampagomarquinhos@cpejr.com.br</p> <p>(31) 99999-9999</p>{" "}
-              </div>
-              <div className="Text_and_Button_Box_Profile">
                 <div className="Text_Profile">Foguete não tem ré e nem eu</div>{" "}
-                <div className="Edit_Profile_Button">
+              </div>
+            </div>
+            <div className="Edit_Profile_Button">
                   {" "}
                   <button
                     onClick={() => {
@@ -35,8 +33,6 @@ function Perfil() {
                     Editar Perfil
                   </button>
                 </div>
-              </div>
-            </div>
           </div>
           <div className="Recent_Games_Title"> Jogos Recentes</div>
           <div className="Recent_Games">
