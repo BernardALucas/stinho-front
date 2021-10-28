@@ -1,4 +1,3 @@
-/* Toda a página*/
 .Container_Profile {
   display: flex;
   flex-direction: row;
@@ -7,98 +6,73 @@
   padding-top: 2%;
   padding-bottom: 2%;
 }
-/* Lado Esquerdo da página*/
 .Left_Wrapper_Profile {
   display: flex;
   flex-direction: column;
-  width: 80%;    
+  width: 80%;
 }
-/* Lado Direito da página*/
 .Right_Wrapper_Profile {
   display: flex;
   flex-direction: column;
-  height: 100vw;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
 }
-/* Parte que contém toda a parte da exibição do perfil*/
 .Data_Profile {
-  padding-left: 2%;
-  padding-top:2%;
-  padding-bottom:2%;
-  padding-right: 2%;
+  padding: 4px;
   display: flex;
   flex-direction: row;
   background-color: #323232;
   border-radius: 0.1cm;
-  width: 100%;
-  max-width:100%;
   height: 20%;
-  
 }
-/*Foto de Perfil*/
-.Photo_Profile{
+.Photo_Profile {
   width: 22.5%;
   height: 100%;
   border-radius: 0.1cm;
 }
-/* Parte que contém todos os dados do usuário dentro da exibição do perfil*/
 .Info_User_Profile {
-  width: 100%;
+  width: 55%;
   margin-left: 4%;
   display: flex;
   flex-direction: column;
 }
-/*Nome do Usuário dentro do Info_User_Profile*/
 .Username_Profile {
   width: 100%;
   color: white;
-  font-size: 0.7cm;
+  font-size: 24pt;
 }
-/*Dados do Usuário dentro do Info_User_Profile*/
 .Userdata_Profile p {
   color: #808080;
   max-height: 100%;
-  font-size: 80%;
+  font-size: 12pt;
   margin: 0;
 }
-/* coluna que contém a frase e o botão de editar perfil*/
-.Text_and_Button_Box_Profile{
-  display: flex;
-  flex-direction: row;
-}
-/*Frase do Usuário dentro do Info_User_Profile*/
-.Text_Profile {
-  color: #FFFFFF;
-  width: 60%;
-  margin-top: 7%;
-  font-size: 0.45cm;
-}
-/*Editando espaço do botão de Editar Perfil*/
-.Edit_Profile_Button{
-  width: 20%;
-  align-items: center;
-  justify-content: center;
-  padding-top: 18%;
-}
 
-/* Editando o botão de Editar Perfil*/
+.Text_Profile {
+  color: #ffffff;
+  font-size: 14pt;
+}
+.Edit_Profile_Button {
+  display: flex;
+  align-items: flex-end;
+}
 .Edit_Profile_Button button {
   background-color: #323232;
   border-style: hidden;
   text-decoration: underline;
   color: #3bce3b;
-  font-size: 0.35cm;
-
-
+  font-size: 12pt;
+  display: flex;
+  align-items: center;
 }
-/* Título abaixo da exibição do perfil*/
+.Edit_Profile_Button svg {
+  margin-left: 4px;
+}
 .Recent_Games_Title {
-  font-size: 1cm;
-  
+  font-size: 30pt;
   margin-top: 2%;
   color: white;
 }
-/* Parte que contém os jogos exibidos no perfil*/
 .Recent_Games {
   display: flex;
   flex-direction: row;
@@ -106,106 +80,424 @@
   width: 100%;
   height: 100%;
   background-color: #323232;
-  border-radius: 0.1cm;
+  border-radius: 4px;
+}
+.Recent_Games img {
+  height: 100%;
+  max-width: 50%;
+  border-radius: 4px;
   
 }
-/* Editando a Imagem na parte de jogos exibidos no perfil*/
-.Recent_Games img{
-    height: 100%;
-    margin-top: 3%;
-    width: 100%;
-    max-width: 50%;
-}
 .Game_Photo_Profile {
- 
   width: 100%;
-  margin-top: 4.5%;
-  margin-left: 4%;
+  padding: 2%;
   height: 100%;
-  max-height: 73%;
-  border-radius: 0.1cm;
   object-fit: cover;
 }
-/* Parte que contém o nome e horas jogadas*/
-.Game_Info_Profile{
-    display: flex;
-    flex-direction: column;
+.Game_Info_Profile {
+  display: flex;
+  flex-direction: column;
 }
-/* Editando o nome*/
-.Game_Name_Profile{
-    color: white;
-    margin-left: 15%;
-    margin-top: 9%;
-    font-size: 0.8cm;
-    width: 100%;
-
+.Game_Name_Profile {
+  color: white;
+  margin-left: 15%;
+  margin-top: 9%;
+  font-size: 0.8cm;
+  width: 100%;
 }
-/* Editando a parte de horas registradas*/
-.Hours_Played_Profile{
-    width: 100%;
-    margin-left: 15%;
-    margin-top: 10%;
-    color:#808080;
-
+.Hours_Played_Profile {
+  width: 100%;
+  margin-left: 15%;
+  margin-top: 10%;
+  color: #808080;
 }
-
-/* Espaço botão Biblioteca*/
-.Library_Button_Profile{
+.Library_Button_Profile {
   margin-top: 4%;
   align-items: center;
   justify-content: center;
   display: flex;
   width: 100%;
-  font-size: 0.8cm;
+  font-size: 14pt;
   border-radius: 0.1cm;
-  border-color: #3bce3b; 
+  border-color: #3bce3b;
 }
-/* Editando botão Biblioteca*/
-.Library_Button_Profile button{
-    border-radius: 0.1cm;
-    border-color: #3bce3b;
-    border-width: 0.07cm;
-    background-color: #000000;
-    color: #3bce3b;
-    width: 100%;
-    max-width: 60%;
+.Library_Button_Profile button {
+  border-radius: 0.1cm;
+  background-color: transparent;
+  border-width: 0.07cm;
+  color: #ffffff;
+  width: 100%;
+  height: 4vw;
+  max-width: 60%;
+  border: 0.25px solid #b7c1ba;
 }
-
-
-/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-
-.Static_Friend_List {  
+.Library_Button_Profile button:hover {
+  background: #3bce3b;
+  color: #000000;
+  border: 0.25px solid #000000;
+}
+.Static_Friend_List {
   margin-left: 10%;
   height: 100%;
   width: 90%;
-  border-radius: 0.1cm;
+  border-radius: 4px;
   background-color: #323232;
-  padding-left: 9%;
-  padding-right:5% ;
 }
-.Static_Friend_List h1{
-  color:white;
-  font-size: 0.6cm;
-  padding-left: 4.2%;
+.Static_Friend_List h1 {
+  text-align: center;
+  color: white;
+  font-size: 18pt;
   padding-top: 10%;
   width: 100%;
   height: 10%;
 }
-.Static_Friend_List p{
+.Static_Friend_List p {
   align-items: center;
   justify-content: center;
+  text-align: center;
   font-size: 0.4cm;
-  padding-left: 4.2%;
   color: white;
 }
+@media (max-width:1250px) {
+  .Username_Profile{
+    font-size: 18pt;
+  }
+  .Edit_Profile_Button button{
+    font-size: 10pt;
+  }
 
+  
+}
+@media (max-width: 1080px) {
+  .Data_Profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+  }
+  .Photo_Profile {
+    width: 25%;
+    border-radius: 50%;
+  }
+  .Username_Profile {
+    font-size: 18pt;
+    display: flex;
+    align-items: center;
+  }
 
-
-
-@media(max-width:1065px) {
-  .Container_Profile{
+  .Info_User_Profile {
+    width: 100%;
+  }
+  .Info_User_Profile p {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 12pt;
+    width: 80%;
+  }
+  .Text_Profile {
+    width: 100%;
+    font-size: 14pt;
+    margin: 0;
+  }
+  .Container_Profile {
     display: flex;
     flex-direction: column;
-  } 
-}
+  }
 
+  .Left_Wrapper_Profile {
+    width: 100%;
+  }
+  .Recent_Games {
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    margin-bottom: 2%;
+  }
+
+  .Recent_Games img {
+    height: 240px;
+    object-fit: cover;
+    margin-left: 0;
+    max-width: 100%;
+    margin-top: 0;
+  }
+  .Game_Info_Profile {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  .Hours_Played_Profile {
+    width: 100%;
+    margin: 0;
+    padding-right: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 18pt;
+  }
+  .Game_Name_Profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28pt;
+    margin: 0;
+    width: 100%;
+  }
+  .Recent_Games_Title {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 30pt;
+  }
+  .Game_Photo_Profile {
+    padding: 4px;
+    border-radius: 6px;
+  }
+
+  .Edit_Profile_Button {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+  }
+  .Edit_Profile_Button button {
+    font-size: 10.2pt;
+    padding-top: 100px;
+  }
+  .Library_Button_Profile button {
+    height: 60px;
+    font-size: 26pt;
+    padding: 1px;
+  }
+  .Static_Friend_List {
+    margin-top: 4%;
+    width: 100%;
+    padding: 0;
+    margin-left: 0;
+  }
+  .Static_Friend_List h1 {
+    font-size: 24pt;
+    padding-top: 4px;
+    text-align: center;
+    padding-left: 0;
+  }
+  .Static_Friend_List p {
+    font-size: 18pt;
+    text-align: center;
+    padding: 0;
+  }
+}
+@media (max-width: 720px) {
+  .Photo_Profile {
+    width: 50%;
+    border-radius: 50%;
+  }
+  .Username_Profile {
+    font-size: 17pt;
+    display: flex;
+    align-items: center;
+  }
+  .Data_Profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+  }
+  .Info_User_Profile {
+    width: 100%;
+  }
+  .Info_User_Profile p {
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 12pt;
+  }
+  .Text_Profile {
+    width: 100%;
+    font-size: 14pt;
+    margin: 0;
+  }
+  .Container_Profile {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .Left_Wrapper_Profile {
+    width: 100%;
+  }
+  .Recent_Games {
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    margin-bottom: 2%;
+  }
+  .Hours_Played_Profile {
+    display: none;
+  }
+  .Recent_Games img {
+    height: 120px;
+    object-fit: cover;
+    margin-left: 0;
+    max-width: 100%;
+    margin-top: 0;
+  }
+  .Game_Name_Profile {
+    font-size: 15pt;
+    margin: 0;
+    width: 100%;
+  }
+  .Recent_Games_Title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20pt;
+  }
+  .Game_Photo_Profile {
+    padding: 4px;
+    border-radius: 4px;
+  }
+
+  .Edit_Profile_Button {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .Edit_Profile_Button button {
+    font-size: 14pt;
+    padding: 0;
+  }
+  .Library_Button_Profile button {
+    height: 60px;
+    font-size: 16pt;
+    padding: 1px;
+  }
+  .Static_Friend_List {
+    margin-top: 4%;
+    width: 100%;
+    padding: 0;
+    margin-left: 0;
+  }
+  .Static_Friend_List h1 {
+    font-size: 16pt;
+    padding-top: 4px;
+    text-align: center;
+    padding-left: 0;
+  }
+  .Static_Friend_List p {
+    font-size: 12pt;
+    text-align: center;
+    padding: 0;
+  }
+}
+@media (max-width: 360px) {
+  .Data_Profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+  }
+  .Info_User_Profile {
+    width: 100%;
+  }
+  .Info_User_Profile p {
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .Text_Profile {
+    width: 100%;
+    font-size: 13pt;
+    margin: 0;
+  }
+  .Container_Profile {
+    display: flex;
+    flex-direction: column;
+  }
+  .Static_Friend_List {
+    margin-top: 4%;
+    width: 100%;
+    padding: 0;
+  }
+  .Left_Wrapper_Profile {
+    width: 100%;
+  }
+  .Recent_Games {
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    margin-bottom: 2%;
+  }
+  .Hours_Played_Profile {
+    display: none;
+  }
+  .Recent_Games img {
+    height: 90px;
+    object-fit: cover;
+    margin-left: 0;
+    max-width: 100%;
+  }
+  .Game_Name_Profile {
+    font-size: 20pt;
+    margin: 0;
+    width: 100%;
+  }
+  .Recent_Games_Title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20pt;
+  }
+  .Game_Photo_Profile {
+    padding: 4px;
+    border-radius: 2px;
+  }
+  .Photo_Profile {
+    width: 50%;
+    border-radius: 50%;
+  }
+  .Username_Profile {
+    font-size: 16pt;
+    display: flex;
+    align-items: center;
+  }
+  .Edit_Profile_Button {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0%;
+  }
+  .Edit_Profile_Button button {
+    font-size: 16px;
+    padding: 0;
+  }
+  .Library_Button_Profile button {
+    height: 50px;
+    font-size: 13pt;
+  }
+  .Static_Friend_List h1 {
+    font-size: 14pt;
+    padding-top: 4px;
+    text-align: center;
+    padding-left: 0;
+  }
+  .Static_Friend_List p {
+    font-size: 12pt;
+    text-align: center;
+    padding: 0;
+  }
+}

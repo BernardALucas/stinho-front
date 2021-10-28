@@ -14,20 +14,20 @@ function Header() {
                 </div>
 
                 <div className = "botoes-header">
-                    <div className = "home-header"><button onClick = {()=>{window.location.href = "/home";}} class = "btn-header">Home</button></div>
-                    <div className = "store-header"><button onClick = {()=>{window.location.href = "/allgames";}} class = "btn-header">Store</button></div>
-                    <div className = "biblioteca-header"><button onClick = {()=>{window.location.href = "/biblioteca";}} class = "btn-header">Biblioteca</button></div>
-                    <div className = "entrar-header"><button onClick = {()=>{window.location.href = "/login";}} class = "btn-header" >Entrar</button></div>
+                    <div className = "home-header"><button onClick = {()=>{window.location.href = "/home";}} class = "btn-header">HOME</button></div>
+                    <div className = "store-header"><button onClick = {()=>{window.location.href = "/allgames";}} class = "btn-header">STORE</button></div>
+                    <div className = "biblioteca-header"><button onClick = {()=>{window.location.href = "/biblioteca";}} class = "btn-header">BIBLIOTECA</button></div>
+                    <div className = "entrar-header"><button onClick = {()=>{window.location.href = "/login";}} class = "btn-header" >ENTRAR</button></div>
                 </div>
             <div className ="btn-drawer-header">
                     <Dropdown className="menu-header" style={{backgroundColor:"black"}}>
                 
                         <Dropdown.Toggle id="dropdown-button-dark-example1" variant="dark"><CgMenu/></Dropdown.Toggle>
                         <Dropdown.Menu variant="dark" className="super-colors">
-                        <Dropdown.Item onClick = {()=>{window.location.href = "/home";}} >Home</Dropdown.Item>
-                        <Dropdown.Item onClick = {()=>{window.location.href = "/allgames";}} >Store</Dropdown.Item>
-                        <Dropdown.Item onClick = {()=>{window.location.href = "/biblioteca";}}>biblioteca</Dropdown.Item>
-                        <Dropdown.Item onClick = {()=>{window.location.href = "/login";}}>Entrar</Dropdown.Item>
+                        <Dropdown.Item onClick = {()=>{window.location.href = "/home";}} >HOME</Dropdown.Item>
+                        <Dropdown.Item onClick = {()=>{window.location.href = "/allgames";}} >STORE</Dropdown.Item>
+                        <Dropdown.Item onClick = {()=>{window.location.href = "/biblioteca";}}>BIBLIOTECA</Dropdown.Item>
+                        <Dropdown.Item onClick = {()=>{window.location.href = "/login";}}>ENTRAR</Dropdown.Item>
                         </Dropdown.Menu>
                     </Dropdown>
                 </div>
