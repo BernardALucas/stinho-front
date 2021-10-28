@@ -44,4 +44,4 @@ function Biblioteca(){
 
 }
 
-export default Biblioteca
+export default Biblioteca;
