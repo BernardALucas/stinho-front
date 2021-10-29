@@ -49,10 +49,12 @@ function Editar_Perfil() {
             </div>
             <div className="Mudar_Foto_Perfil">
               <div className="Escrita_Avatar">Avatar:</div>
-
+              <div className="Botao_Avatar">
               <button className="Mudar_Avatar"> Enviar foto</button>
+              <h1>Enviar uma foto do seu dispositivo</h1>
+              </div>
             </div>
-            <h1>Enviar uma foto do seu dispositivo</h1>
+            
           </div>
           <div className="Lado_Direito_Editar_Perfil">
             <div className="Barra_Verde_Estética"></div>
@@ -110,28 +112,24 @@ function Editar_Perfil() {
                     ></input>
                   </div>
                 </div>
-              </div>
-              <div className="Rua_Numero">
-                <div className="Mudar_Rua">
+              </div>  
+              < div className="Rua_Numero">
                   <div className="Caixa_Mudança">
                     <input
                       className="Text_Box_Rua_Editar_Perfil"
                       placeholder="Rua:"
                       onChange={(e) => setRua(e.target.value)}
                     ></input>
-                  </div>
                 </div>
                 <div className="Mudar_Numero">
                   <div className="Escrita_Direita_Inferior"></div>
-                  <div className="Caixa_Mudança">
-                    <input
-                      className="Text_Box_Numero_Editar_Perfil"
-                      placeholder="Número:"
-                      onChange={(e) => setNumero(e.target.value)}
-                    ></input>
-                  </div>
+                  <input
+                    className="Text_Box_Numero_Editar_Perfil"
+                    placeholder="Número:"
+                    onChange={(e) => setNumero(e.target.value)}
+                  ></input>
                 </div>
-              </div>
+             </div> 
             </div>
             <div className="Barra_Verde_Estética"></div>
             <button
@@ -141,7 +139,6 @@ function Editar_Perfil() {
               Confirmar Alterações
             </button>
           </div>
-          
         </div>
       </div>
       {Footer()}
