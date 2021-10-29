@@ -24,7 +24,7 @@ function Login(){
                     <div className="inputs-login">
                         <input className="email-login" placeholder="endereço de email" onChange={(e)=> setEmail(e.target.value)}></input>
                         <input className="email-login" placeholder="senha" type="password" onChange={(e)=> setPassword(e.target.value)}></input>
-                        <div>
+                        <div className="conjutno-checkbox-login">
                             <input type="checkbox" id="checkbox-login"className="checkbox-login" />
                             <label for="checkbox-login" className="manter-logado"> manter-me logado </label>
                             <button className="btn-login">esqueceu sua senha</button>
