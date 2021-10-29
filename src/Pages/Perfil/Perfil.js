@@ -1,8 +1,9 @@
 import React from "react";
 import Header from "../../Header";
 import "./Perfil.css";
-//import Footer from "../../Footer/Footer";
+import Footer from "../../Footer/Footer";
 import { useHistory } from "react-router-dom";
+import { FaEdit } from "react-icons/fa";
 
 
 function Perfil() {
@@ -30,7 +31,9 @@ function Perfil() {
                       history.push("editar_perfil");
                     }}
                   >
-                    Editar Perfil
+                    
+                     Editar Perfil
+                     <FaEdit/>
                   </button>
                 </div>
           </div>
@@ -87,6 +90,7 @@ function Perfil() {
           </div>
         </div>
       </div>
+      {Footer()}
     </div>
   );
 }
