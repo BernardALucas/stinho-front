@@ -9,6 +9,11 @@ function Login(){
     const [email, setEmail]=useState();
     const [password, setPassword]=useState();
 
+    async function login(e){
+        e.preventDefault();
+        history.push("home")
+    }
+
     return(
         <div className="page-login">
         <div className="base-login">
@@ -29,7 +34,7 @@ function Login(){
                             <label for="checkbox-login" className="manter-logado"> manter-me logado </label>
                             <button className="btn-login">esqueceu sua senha</button>
                         </div>
-                        <div className="botao-logar"><button className="btn-logar">iniciar sessão</button></div>
+                        <div className="botao-logar"><button className="btn-logar" onClick={login}>iniciar sessão</button></div>
                     </div>
                     <div className="cadastrar-login">
                     ainda não é cadastrado?
