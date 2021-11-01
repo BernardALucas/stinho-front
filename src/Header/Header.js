@@ -20,11 +20,10 @@ function Header() {
                     <div className = "entrar-header"><button onClick = {()=>{window.location.href = "/login";}} class = "btn-header" >ENTRAR</button></div>
                 </div>
             <div className ="btn-drawer-header">
-                    <Dropdown className="menu-header" style={{backgroundColor:"black"}}>
-                
-                        <Dropdown.Toggle id="dropdown-button-dark-example1" variant="dark"><CgMenu/></Dropdown.Toggle>
-                        <Dropdown.Menu variant="dark" className="super-colors">
-                        <Dropdown.Item onClick = {()=>{window.location.href = "/home";}} >HOME</Dropdown.Item>
+                    <Dropdown className="menu-header" style={{backgroundColor:"black"}} >
+                        <Dropdown.Toggle id="dropdown-button-dark-example1" variant="dark"style={{backgroundColor:"black"}}>< CgMenu /></Dropdown.Toggle>
+                        <Dropdown.Menu variant="dark" className="super-colors" style={{backgroundColor:"#000000"}} >
+                        <Dropdown.Item onClick = {()=>{window.location.href = "/home";}}  >HOME</Dropdown.Item>
                         <Dropdown.Item onClick = {()=>{window.location.href = "/allgames";}} >STORE</Dropdown.Item>
                         <Dropdown.Item onClick = {()=>{window.location.href = "/biblioteca";}}>BIBLIOTECA</Dropdown.Item>
                         <Dropdown.Item onClick = {()=>{window.location.href = "/login";}}>ENTRAR</Dropdown.Item>

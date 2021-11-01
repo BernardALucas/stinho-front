@@ -57,6 +57,14 @@
     color: #000000;
     background-color: black;
 }
+.btn-check:active+.btn-dark, .btn-check:checked+.btn-dark, .btn-dark.active, .btn-dark:active, .show>.btn-dark.dropdown-toggle {
+    color: #808080;
+    background-color: #000000;
+    border-color: #000000;
+}
+
+
+
 
 @media only screen and (max-width: 700px) {
     .botoes-header{
