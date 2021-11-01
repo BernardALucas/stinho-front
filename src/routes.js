@@ -16,7 +16,6 @@ function Routes(){
     <BrowserRouter> 
         <Switch> 
             <Route exact path="/login" component ={Login}/>
-            <Route exact path="/home" component ={Home}/>
             <Route exact path="/cadastro" component ={Cadastro}/>
             <Route exact path="/allgames" component ={All_Games}/>
             <Route path="/biblioteca" component ={Biblioteca}/>        
@@ -24,6 +23,8 @@ function Routes(){
             <Route path="/editar_perfil" component ={Editar_Perfil}/>
             <Route path="/paginajogo" component ={PaginaDoJogo}/>
             
+            <Route exact path="/" component ={Home}/>
+
         </Switch>     
     </BrowserRouter>
     );
