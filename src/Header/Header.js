@@ -53,7 +53,7 @@ function Header() {
           <div className="entrar-header">
             <button
               onClick={() => {
-                window.location.href = "/login";
+                window.location.href = "/perfil";
               }}
               class="btn-header"
             >
@@ -101,7 +101,7 @@ function Header() {
               </Dropdown.Item>
               <Dropdown.Item
                 onClick={() => {
-                  window.location.href = "/login";
+                  window.location.href = "/perfil";
                 }}
               >
                 {label}

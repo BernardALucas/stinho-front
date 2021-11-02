@@ -11,7 +11,7 @@ function Login() {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
 
-  async function login(e) {
+  function login(e) {
     e.preventDefault();
     api
       .post("/login", { email, password })
@@ -19,7 +19,12 @@ function Login() {
         localStorage.setItem("user", JSON.stringify(res.data));
         history.push("/");
       })
-      .catch((err) => console.error(err));
+      .catch((err) => {
+        setEmail("");
+        setPassword("");
+        console.log("erro", err);
+        alert(err.message);
+      });
   }
 
   return (
@@ -46,14 +51,15 @@ function Login() {
               <input
                 className="email-login"
                 placeholder="endereço de email"
+                value={email}
                 onChange={(e) => setEmail(e.target.value)}
               ></input>
               <input
                 className="email-login"
                 placeholder="senha"
                 type="password"
+                value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                
               ></input>
               <div className="conjutno-checkbox-login">
                 <input
