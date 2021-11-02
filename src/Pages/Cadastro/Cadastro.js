@@ -2,11 +2,45 @@ import React, { useState } from "react";
 import "./cadastro.css";
 import Footer from "../../Footer";
 import { useHistory } from "react-router-dom";
+import api from "../../services/api";
 
 function Cadastro() {
   const history = useHistory();
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
+  const [name, setName] = useState();
+  const [nickname, setNickname] = useState();
+  const [cellphone, setCellphone] = useState();
+  const [country, setCountry] = useState();
+  const [state, setState] = useState();
+  const [city, setCity] = useState();
+  const [district, setDistrict] = useState();
+  const [street, setStreet] = useState();
+  const [number, setNumber] = useState();
+
+  async function Cadastro(e) {
+    e.preventDefault();
+    try {
+      api.post("/users/createnewuser", {
+        email,
+        password,
+        name,
+        nickname,
+        cellphone,
+        country,
+        state,
+        city,
+        district,
+        street,
+        number,
+      });
+      console.log(email);
+    } catch (error) {
+      console.warn(error);
+      alert(error.message);
+    }
+  }
+
   return (
     <div>
       <div className="base-cadastro">
@@ -19,48 +53,83 @@ function Cadastro() {
             <input
               className="caixa-cadastro"
               placeholder="Endereço de E-mail"
+              onChange={(e) => setEmail(e.target.value)}
+            ></input>
+            <input
+              className="caixa-cadastro"
+              placeholder="Nome"
+              onChange={(e) => setName(e.target.value)}
             ></input>
             <input
               className="caixa-cadastro"
               placeholder="Nome de perfil"
+              onChange={(e) => setNickname(e.target.value)}
             ></input>
-            <input className="caixa-cadastro" placeholder="Senha"></input>
+            <input
+              className="caixa-cadastro"
+              placeholder="Senha"
+              type="password"
+              onChange={(e) => setPassword(e.target.value)}
+            ></input>
             <input
               className="caixa-cadastro"
               placeholder="Confirmar senha"
+              type="password"
+              onChange={(e) => setPassword(e.target.value)}
             ></input>
             <input
               className="caixa-cadastro"
               placeholder="Numero de telefone"
+              onChange={(e) => setCellphone(e.target.value)}
+            ></input>
+            <input
+              className="caixa-cadastro"
+              placeholder="País"
+              onChange={(e) => setCountry(e.target.value)}
             ></input>
 
             <div>
-              <input className="caixa-menor" placeholder="Estado"></input>
-              <input className="caixa-media" placeholder="Cidade"></input>
+              <input
+                className="caixa-menor"
+                placeholder="Estado"
+                onChange={(e) => setState(e.target.value)}
+              ></input>
+              <input
+                className="caixa-media"
+                placeholder="Cidade"
+                onChange={(e) => setCity(e.target.value)}
+              ></input>
             </div>
 
-            <input className="caixa-cadastro" placeholder="bairro"></input>
+            <input
+              className="caixa-cadastro"
+              placeholder="Bairro"
+              onChange={(e) => setDistrict(e.target.value)}
+            ></input>
 
             <div>
-              <input className="caixa-menor" placeholder="N°da casa"></input>
-              <input className="caixa-media" placeholder="Rua"></input>
+              <input
+                className="caixa-menor"
+                placeholder="Número"
+                onChange={(e) => setNumber(e.target.value)}
+              ></input>
+              <input
+                className="caixa-media"
+                placeholder="Rua"
+                onChange={(e) => setStreet(e.target.value)}
+              ></input>
             </div>
 
-            {/* <div className="enviar-email">
-                <input type="checkbox" id="checkbox-login"className="checkbox-cadastro" />
-                <label for="checkbox-login" className="enviar-cadastro"> por favor me envie emails que vão encher a minha caixa de entrada  </label>
-                </div> */}
-
-            <button className="botao-cadastrar-se"> criar uma conta</button>
+            <button className="botao-cadastrar-se" onClick={Cadastro}> Criar uma conta</button>
             <div className="entrar-cadastro">
-              já é cadastrado?
+              Já é cadastrado?
               <button
                 className="btn-cadastro"
                 onClick={() => {
                   history.push("login");
                 }}
               >
-                entrar
+                Entrar
               </button>
             </div>
           </div>
