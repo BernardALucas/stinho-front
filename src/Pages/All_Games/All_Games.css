@@ -35,20 +35,26 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 100%;
+  width: 20vw;
+
 }
 
 .jogoTitulo {
   line-height: initial;
   font-size: xx-large;
-  width: 100%;
+  width: 20vw;
   padding-bottom: 5%;
+  text-overflow: ellipsis;
+  overflow:hidden;
+  white-space:nowrap;
 }
 
 .jogoDescrição {
   font-size: medium;
   margin-top: -3%;
-  height: fit-content;
+  text-overflow: ellipsis;
+  overflow:hidden;
+  height: 10vh;
 }
 .textojogo{
     padding-bottom: 7%;
@@ -60,7 +66,7 @@
   color: #ffffff;
   border-style: none;
   border-radius: 5px;
-  height: 10%;
+  height: 15%;
   width: 100%;
   display: inline-block;
   align-items: center;
@@ -212,7 +218,7 @@
     display: flex;
     flex-direction: column;
     width: 45%;
-    height: 20vh;
+    height: 13vh;
     align-items: center;
     justify-content: center;
     font-size: 17pt;
@@ -238,10 +244,12 @@
   }
   .jogoTitulo{
       padding-bottom: 5%;
+      width: 75.5vw;
   }
   .descriçãoJogo{
       margin-left: 0px;
       align-items: center;
+      width: 76.5vw;
   }
   
   
