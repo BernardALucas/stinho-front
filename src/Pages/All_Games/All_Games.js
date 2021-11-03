@@ -73,7 +73,7 @@ function All_Games() {
 
                                 <div className="descriçãoJogo">
                                     <div className="textojogo">
-                                        <p className="jogoTitulo"> {game_id}:</p>
+                                        <p className="jogoTitulo"> {title}:</p>
                                         <p className="jogoDescrição"> {description} </p>
                                     </div>
                                     <button className="botaoVejaMais"> Veja Mais </button>
