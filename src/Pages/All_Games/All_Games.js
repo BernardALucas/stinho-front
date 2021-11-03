@@ -2,9 +2,7 @@ import React, { useEffect, useState } from "react";
 import Header from "../../Header";
 import Footer from "../../Footer";
 import "./All_Games.css";
-import Dropdown from 'react-bootstrap/Dropdown';
-
-
+import Dropdown from "react-bootstrap/Dropdown";
 
 function All_Games(){
     const [data, setData] = useState([]);
@@ -85,16 +83,39 @@ function All_Games(){
                         </div>
                     );
 
-                    else
-                        return null;
-                })}
-            
-            </div>
 
-            { Footer() }
-        </div>
-    )
+                <div className="descriçãoJogo">
+                  <div className="textojogo">
+                    <p className="jogoTitulo"> {name}:</p>
+                    <p className="jogoDescrição"> {descricao} </p>
+                  </div>
+                  <button className="botaoVejaMais"> Veja Mais </button>
+                </div>
 
+                <div className="preçoJogo">
+                  <div className="parteBranca">
+                    <p className="textoPreço"> A partir de: </p>
+                    <p className="valorAtual"> R$ {price} </p>
+                  </div>
+                  <button
+                    className="botaoComprar"
+                    onClick={() => {
+                      window.location.href = id;
+                    }}
+                  >
+                    {" "}
+                    COMPRAR{" "}
+                  </button>
+                </div>
+              </div>
+            );
+          else return null;
+        })}
+      </div>
+
+      {Footer()}
+    </div>
+  );
 }
 
 export default All_Games;
