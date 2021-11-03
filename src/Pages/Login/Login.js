@@ -4,6 +4,7 @@ import Footer from "../../Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useHistory } from "react-router-dom";
 import api from "../../services/api";
+import {login} from "../../services/auth"
 import { BsFillCreditCard2FrontFill, BsListNested } from "react-icons/bs";
 
 function Login() {
@@ -11,20 +12,20 @@ function Login() {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
 
-  function login(e) {
+  async function handlelogin(e) {
     e.preventDefault();
-    api
-      .post("/login", { email, password })
-      .then((res) => {
-        localStorage.setItem("user", JSON.stringify(res.data));
-        history.push("/");
-      })
-      .catch((err) => {
-        setEmail("");
-        setPassword("");
-        console.log("erro", err);
-        alert(err.message);
-      });
+    try {
+      const response = await api.post("/login", { email, password });
+      login(response.data.acessToken);
+      history.push("/");
+    } catch (error) {
+      if(error.response.status ===403){
+        alert("Credenciais Invalidas!");
+      }
+      else{
+        alert(error.response.data.notification);
+      }
+    }
   }
 
   return (
@@ -74,7 +75,7 @@ function Login() {
                 <button className="btn-login">esqueceu sua senha</button>
               </div>
               <div className="botao-logar">
-                <button className="btn-logar" onClick={login}>
+                <button className="btn-logar" onClick={handlelogin}>
                   iniciar sessão
                 </button>
               </div>

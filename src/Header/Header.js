@@ -2,15 +2,15 @@ import React, { useEffect, useState } from "react";
 import "./Header.css";
 import Dropdown from "react-bootstrap/Dropdown";
 import { CgMenu } from "react-icons/cg";
-import {FiLogOut} from "react-icons/fi";
+import { FiLogOut } from "react-icons/fi";
+import { isAuthenticated, logout } from "../services/auth"
+import { useHistory } from "react-router-dom";
 
 function Header() {
+  const history = useHistory();
   const [label, setLabel] = useState("");
-  const user = JSON.parse(localStorage.getItem("user"));
-  useEffect(() => {
-    console.log(user);
-    user ? setLabel("PERFIL") : setLabel("ENTRAR");
-  },[user]);
+  console.log(isAuthenticated())
+  
 
   return (
     <div>
@@ -57,9 +57,20 @@ function Header() {
               }}
               class="btn-header"
             >
-              {label}
+              {isAuthenticated() ? "PERFIL" : "ENTRAR" }
             </button>
+
           </div>
+          {isAuthenticated() && <button
+            onClick={() => {
+              logout();
+              history.push("/");
+            }}
+            class="btn-header"
+          >
+            <FiLogOut></FiLogOut>
+
+          </button>}
         </div>
         <div className="btn-drawer-header">
           <Dropdown
