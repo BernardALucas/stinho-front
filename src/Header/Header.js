@@ -8,7 +8,6 @@ import { useHistory } from "react-router-dom";
 
 function Header() {
   const history = useHistory();
-  const [label, setLabel] = useState("");
   console.log(isAuthenticated())
   
 
@@ -66,7 +65,7 @@ function Header() {
               logout();
               history.push("/");
             }}
-            class="btn-header"
+            class="btn--logout-header"
           >
             <FiLogOut></FiLogOut>
 
@@ -115,8 +114,20 @@ function Header() {
                   window.location.href = "/perfil";
                 }}
               >
-                {label}
               </Dropdown.Item>
+              <Dropdown.Item onClick={() => {
+                window.location.href = "/perfil";
+              }} >
+              {isAuthenticated() ? "PERFIL" : "ENTRAR" }
+              </Dropdown.Item>
+              {isAuthenticated() && <Dropdown.Item
+              onClick={() => {
+                logout();
+                history.push("/");
+              }}
+              >
+                <FiLogOut></FiLogOut>
+              </Dropdown.Item>}
             </Dropdown.Menu>
           </Dropdown>
         </div>
