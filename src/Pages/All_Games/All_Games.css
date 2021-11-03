@@ -24,8 +24,10 @@
   border-radius: 10px;
   margin-left: 2%;
   width: 25vw;
-  height: 12vw;
-
+  height: 100%;
+}
+.jogoFoto img {
+  object-fit: fill;
 }
 
 
@@ -104,7 +106,7 @@
 }
 
 .valorAtual {
-  font-size: 220%;
+  font-size: 170%;
   font-weight: bolder;
   margin-top: -3%;
 }
@@ -125,7 +127,7 @@
   color: #222222;
   border-style: none;
   border-radius: 5px;
-  height: 12vh;
+  height: 7vh;
   width: 100%;
   /* vertical-align: 0%; */
 }
@@ -133,6 +135,9 @@
 .botaoComprar:hover {
   background: #3bce3b99;
   /* color: #ffffff90; */
+}
+@media (max-width: 1050px){
+
 }
 @media (max-width: 720px) {
   .containerJogo {
@@ -149,25 +154,32 @@
     display: flex;
     flex-direction: row;
     width: 100%;
+    justify-content: center;
     align-items: center;
     padding-left: 0;
+    
   }
   .jogoFoto {
+    padding: 20px;
     display: flex;
     flex-direction: row;
     width: 100%;
     height: 30%;
-    padding: 4%;
-    padding-left: 0%;
+    margin-left: 0%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
   }
 
   .textojogo {
     display: flex;
     flex-direction: column;
     width: 100%;
+    height: -moz-fit-content;
     height: fit-content;
-    padding: 4%;
-  }
+    padding: 0%;
+    padding-left: 4%;
+}
   .botaoVejaMais {
     display: flex;
     flex-direction: row;
@@ -175,7 +187,7 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 10%;
-    padding-right: 6%;
+    margin-top: -3%;
     align-items: center;
     height: 22%;
   }
@@ -218,7 +230,7 @@
     display: flex;
     flex-direction: column;
     width: 45%;
-    height: 13vh;
+    height: 7vh;
     align-items: center;
     justify-content: center;
     font-size: 17pt;
