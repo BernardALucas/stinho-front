@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Editar_Perfil.css";
 import Header from "../../Header";
 import Footer from "../../Footer";
+import { VscTrash } from "react-icons/vsc";
 
 function handleSubmit() {}
 
@@ -30,6 +31,11 @@ function Editar_Perfil() {
             <div className="Nome_Dados_Editar_Perfil">
               Relâmpago Marquinhos - Editar Perfil
             </div>
+            <div className="Excluir_Perfil">
+              <button>
+                <VscTrash color={"FF1E56"} />
+              </button>
+            </div>
           </div>
         </div>
         <div className="Parte_de_Baixo_Editar_Perfil">
@@ -50,24 +56,21 @@ function Editar_Perfil() {
             <div className="Mudar_Foto_Perfil">
               <div className="Escrita_Avatar">Avatar:</div>
               <div className="Botao_Avatar">
-              <button className="Mudar_Avatar"> Enviar foto</button>
-              <h1>Enviar uma foto do seu dispositivo</h1>
+                <button className="Mudar_Avatar"> Enviar foto</button>
+                <h1>Enviar uma foto do seu dispositivo</h1>
               </div>
             </div>
-            
           </div>
           <div className="Lado_Direito_Editar_Perfil">
             <div className="Barra_Verde_Estética"></div>
             <div className="Dados_Direita_Perfil">
               <div className="Escrita_Direita">Dados de Cobrança:</div>
               <div className="Mudar_Email">
-                <div className="Caixa_Mudança">
-                  <input
-                    className="Text_Box_Email_Editar_Perfil"
-                    placeholder="E-mail:"
-                    onChange={(e) => setEmail(e.target.value)}
-                  ></input>
-                </div>
+                <input
+                  className="Text_Box_Email_Editar_Perfil"
+                  placeholder="E-mail:"
+                  onChange={(e) => setEmail(e.target.value)}
+                ></input>
               </div>
               <div className="Mudar_Telefone">
                 <input
@@ -80,20 +83,17 @@ function Editar_Perfil() {
 
               <div className="Escrita_Direita">Endereço:</div>
               <div className="País_Estado">
-                <div className="Caixa_Mudança">
-                  <input
-                    className="Text_Box_País_Editar_Perfil"
-                    placeholder="País:"
-                    onChange={(e) => setPais(e.target.value)}
-                  ></input>
-                </div>
-                <div className="Caixa_Mudança">
-                  <input
-                    className="Text_Box_Estado_Editar_Perfil"
-                    placeholder="Estado:"
-                    onChange={(e) => setEstado(e.target.value)}
-                  ></input>
-                </div>
+                <input
+                  className="Text_Box_País_Editar_Perfil"
+                  placeholder="País:"
+                  onChange={(e) => setPais(e.target.value)}
+                ></input>
+
+                <input
+                  className="Text_Box_Estado_Editar_Perfil"
+                  placeholder="Estado:"
+                  onChange={(e) => setEstado(e.target.value)}
+                ></input>
               </div>
               <div className="Cidade_Bairro">
                 <input
@@ -102,34 +102,26 @@ function Editar_Perfil() {
                   onChange={(e) => setCidade(e.target.value)}
                 ></input>
 
-                <div className="Mudar_Bairro">
-                  <div className="Escrita_Direita_Inferior"></div>
-                  <div className="Caixa_Mudança">
-                    <input
-                      className="Text_Box_Bairro_Editar_Perfil"
-                      placeholder="Bairro:"
-                      onChange={(e) => setBairro(e.target.value)}
-                    ></input>
-                  </div>
-                </div>
-              </div>  
-              < div className="Rua_Numero">
-                  <div className="Caixa_Mudança">
-                    <input
-                      className="Text_Box_Rua_Editar_Perfil"
-                      placeholder="Rua:"
-                      onChange={(e) => setRua(e.target.value)}
-                    ></input>
-                </div>
-                <div className="Mudar_Numero">
-                  <div className="Escrita_Direita_Inferior"></div>
-                  <input
-                    className="Text_Box_Numero_Editar_Perfil"
-                    placeholder="Número:"
-                    onChange={(e) => setNumero(e.target.value)}
-                  ></input>
-                </div>
-             </div> 
+                <input
+                  className="Text_Box_Bairro_Editar_Perfil"
+                  placeholder="Bairro:"
+                  onChange={(e) => setBairro(e.target.value)}
+                ></input>
+              </div>
+              <div className="Rua_Numero">
+                <input
+                  className="Text_Box_Rua_Editar_Perfil"
+                  placeholder="Rua:"
+                  onChange={(e) => setRua(e.target.value)}
+                ></input>
+
+              
+                <input
+                  className="Text_Box_Numero_Editar_Perfil"
+                  placeholder="Número:"
+                  onChange={(e) => setNumero(e.target.value)}
+                ></input>
+              </div>
             </div>
             <div className="Barra_Verde_Estética"></div>
             <button

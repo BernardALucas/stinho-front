@@ -4,7 +4,6 @@ import "./Home.css"
 import Footer from "../../Footer/Footer";
 
 
-
 function Home() {
     const carrossel = useRef(null);
     const interval = useRef(null);
@@ -12,7 +11,7 @@ function Home() {
     const [data, setData] = useState([]);
 
     useEffect(()=>{
-        fetch('http://localhost:3000/jogos.json')
+        fetch('http://localhost:3333/games')
             .then((response) => response.json())
             .then(setData);
     }, []);
@@ -93,12 +92,12 @@ function Home() {
                         <div className="items_wrapper_home">
                             <div className="items_home" ref={carrossel}>
                             {data.map((item_carrossel) => {
-                                const {id, name, price, oldPrice, image, desenvolvedor, genero} = item_carrossel;
+                                const {game_id, title, price, old_price, image, developer, genero, description, category, nivel_destaque} = item_carrossel;
                                 
-                                if((id - 1000) < 1000)
+                                if(nivel_destaque === "carrossel")
                                     return(
-                                            <button onClick={() => { window.location.href = id; }}>
-                                                <img src={image} alt={name}></img>
+                                            <button onClick={() => { window.location.href = game_id; }}>
+                                                <img src={image} alt={title}></img>
                                             </button>                                       
                                     );
                                     else
@@ -128,26 +127,26 @@ function Home() {
                 {/* Divisão dos dois jogos em destaque da parte de promoções */}
                 <div className="promocao-destaque-home">
                     {data.map((destaque_home)=>{
-                        const {id, name, price, oldPrice, image,desenvolvedor, genero} = destaque_home;
+                        const {game_id, title, price, old_price, image, developer, genero, description, category, nivel_destaque} = destaque_home;
                         
-                        if((id - 2000) < 1000 && (id - 2000)>0)
+                        if(nivel_destaque === "destaque")
                         return(
-                            <button className="destaque1-home" onClick={() => { window.location.href = id; }}>
-                                <img className="image1-home" src= {image} alt={name}></img>
+                            <button className="destaque1-home" onClick={() => { window.location.href = game_id; }}>
+                                <img className="image1-home" src= {image} alt={title}></img>
 
                                 <div className="texto-promocao-destaque-home">
                                     <div className="texto-promocao-destaque-jogo1">
-                                        <h1>{name}</h1>
-                                        <h2>{desenvolvedor}</h2> {/* ADICIONAR MONTADORA DO JOGO */}
+                                        <h1>{title}</h1>
+                                        <h2>{developer}</h2> {/* ADICIONAR MONTADORA DO JOGO */}
 
                                         <div className="conjunto-preco-destaque">
 
                                             <div className="desconto-destaque-home">
-                                                <h1>- {Math.round((1 - (price/oldPrice))*100)}%</h1>
+                                                <h1>- {Math.round((1 - (price/old_price))*100)}%</h1>
                                             </div>
 
                                             <div className="preco">
-                                                <h2><s> R${oldPrice} </s></h2>
+                                                <h2><s> R${old_price} </s></h2>
                                                 <h1>R${price}</h1>
                                             </div>
 
@@ -166,23 +165,23 @@ function Home() {
                 <div className="todos-jogos-promocao">
                     <div className="coluna1-home">
                         {data.map((jogos_promocao) => {
-                            const {id, name, price, oldPrice, image, desenvolvedor, genero} = jogos_promocao;
+                            const {game_id, title, price, old_price, image, developer, genero, description, category, nivel_destaque} = jogos_promocao;
                             
-                            if((id - 3000) < 1000 && (id - 3000)>0)
+                            if(nivel_destaque === "coluna_1")
                                 return(
-                                    <button className="jogo1-promocao-home" onClick={() => { window.location.href = id; }}>
+                                    <button className="jogo1-promocao-home" onClick={() => { window.location.href = game_id; }}>
                                         <div className="imagem-jogo1-home">
-                                            <img src={image} alt = {name} />
-                                            <div className="desconto-home"><h1>- {Math.round((1 - (price/oldPrice))*100)}%</h1></div>
+                                            <img src={image} alt = {title} />
+                                            <div className="desconto-home"><h1>- {Math.round((1 - (price/old_price))*100)}%</h1></div>
                                         </div>
 
                                         <div className="texto-jogo1-home">
                                             <div className="titulo-jogo1-home">
-                                                <h1>{name}</h1>
-                                                <h2>{desenvolvedor}</h2> {/* COLOCAR MONTADORA */}
+                                                <h1>{title}</h1>
+                                                <h2>{developer}</h2> {/* COLOCAR MONTADORA */}
                                             </div>
                                             <div className="preco-jogo1-home">
-                                                <h2><s> R${oldPrice} </s></h2>
+                                                <h2><s> R${old_price} </s></h2>
                                                 <h1>R${price}</h1>
                                             </div>
 
@@ -198,23 +197,23 @@ function Home() {
 
                     <div className="coluna1-home">
                     {data.map((jogos_promocao) => {
-                            const {id, name, price, oldPrice, image, desenvolvedor, genero} = jogos_promocao;
+                            const {game_id, title, price, old_price, image, developer, genero, description, category, nivel_destaque} = jogos_promocao;
                             
-                            if((id - 4000) < 1000 && (id - 4000)>0)
+                            if(nivel_destaque === "coluna_2")
                                 return(
-                                    <button className="jogo1-promocao-home" onClick={() => { window.location.href = id; }}>
+                                    <button className="jogo1-promocao-home" onClick={() => { window.location.href = game_id; }}>
                                         <div className="imagem-jogo1-home">
-                                            <img src={image} alt = {name} />
-                                            <div className="desconto-home"><h1>- {Math.round((1 - (price/oldPrice))*100)}%</h1></div>
+                                            <img src={image} alt = {title} />
+                                            <div className="desconto-home"><h1>- {Math.round((1 - (price/old_price))*100)}%</h1></div>
                                         </div>
 
                                         <div className="texto-jogo1-home">
                                             <div className="titulo-jogo1-home">
-                                                <h1>{name}</h1>
-                                                <h2>{desenvolvedor}</h2> {/* COLOCAR MONTADORA */}
+                                                <h1>{title}</h1>
+                                                <h2>{developer}</h2> {/* COLOCAR MONTADORA */}
                                             </div>
                                             <div className="preco-jogo1-home">
-                                                <h2><s> R${oldPrice} </s></h2>
+                                                <h2><s> R${old_price} </s></h2>
                                                 <h1>R${price}</h1>
                                             </div>
 

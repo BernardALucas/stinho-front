@@ -266,8 +266,9 @@
     padding: 0;
   }
   .Edit_Profile_Button button {
-    font-size: 10.2pt;
+    font-size: 9.8pt;
     padding-top: 100px;
+    padding-right: 1vw;
   }
   .Library_Button_Profile button {
     height: 60px;
@@ -291,6 +292,7 @@
     text-align: center;
     padding: 0;
   }
+  
 }
 @media (max-width: 720px) {
   .Photo_Profile {
@@ -375,6 +377,7 @@
   .Edit_Profile_Button button {
     font-size: 14pt;
     padding: 0;
+    padding-right: 2vw;
   }
   .Library_Button_Profile button {
     height: 60px;

@@ -86,6 +86,11 @@
 @media(max-width:700px){
     .logo_footer {
         justify-content: center;
+        margin-top: 20%;
+    }
+}
+@media(max-width:320px){
+    .logo_footer{
         margin-top: 40%;
     }
 }
