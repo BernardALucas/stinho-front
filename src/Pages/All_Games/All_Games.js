@@ -31,9 +31,19 @@ function All_Games(){
                             .then(setData);}}>Todos os Jogos</Dropdown.Item>
 
                         <Dropdown.Item onClick = {()=>{
-                            fetch('http://localhost:3333/games/category/RPG')
+                            fetch('http://localhost:3333/games/category/Aventura')
                             .then((response) => response.json())
-                            .then(setData);}}>RPG</Dropdown.Item>
+                            .then(setData);}}>Aventura</Dropdown.Item>
+
+                        <Dropdown.Item onClick = {()=>{
+                            fetch('http://localhost:3333/games/category/Ação')
+                            .then((response) => response.json())
+                            .then(setData);}}>Ação</Dropdown.Item>
+
+                        <Dropdown.Item onClick = {()=>{
+                            fetch('http://localhost:3333/games/category/Corrida')
+                            .then((response) => response.json())
+                            .then(setData);}}>Corrida</Dropdown.Item>
 
                         <Dropdown.Item onClick = {()=>{
                             fetch('http://localhost:3333/games/category/RPG')
@@ -41,19 +51,9 @@ function All_Games(){
                             .then(setData);}}>RPG</Dropdown.Item>
 
                         <Dropdown.Item onClick = {()=>{
-                            fetch('http://localhost:3333/games/category/RPG')
+                            fetch('http://localhost:3333/games/category/Tiro')
                             .then((response) => response.json())
-                            .then(setData);}}>RPG</Dropdown.Item>
-
-                        <Dropdown.Item onClick = {()=>{
-                            fetch('http://localhost:3333/games/category/RPG')
-                            .then((response) => response.json())
-                            .then(setData);}}>RPG</Dropdown.Item>
-
-                        <Dropdown.Item onClick = {()=>{
-                            fetch('http://localhost:3333/games/category/RPG')
-                            .then((response) => response.json())
-                            .then(setData);}}>RPG</Dropdown.Item>
+                            .then(setData);}}>Tiro</Dropdown.Item>
                         </Dropdown.Menu>
                     </Dropdown>
                 </div>
