@@ -1,131 +1,253 @@
 .containerJogo {
-    padding-top: 5%;
-    padding-right:10%;
-    padding-left: 10%;
-    color: #ffffff;
-    font-family: 'Ruda', sans-serif;
+  padding-top: 5%;
+  padding-right: 10%;
+  padding-left: 10%;
+  padding-bottom: 5%;
+  color: #ffffff;
+  font-family: "Ruda", sans-serif;
 }
 
-.filtro_all_games{
-    margin-bottom: 2vw;
+.filtro_all_games {
+  margin-bottom: 2vw;
 }
 
 .seçãoJogo {
-    padding: 2%;
-    margin-bottom: 2%;
-    background-color: #222222;
-    border-radius: 10px;
-    display: flex;
-    height: 25%;
-    
+  padding: 2%;
+  margin-bottom: 2%;
+  background-color: #222222;
+  border-radius: 10px;
+  display: flex;
+  height: fit-content;
 }
 
 .jogoFoto {
-    border-radius: 10px;
-    margin-left: 2%; 
-    width: 25vw;
-    height: 12vw;
-    
+  border-radius: 10px;
+  margin-left: 2%;
+  width: 25vw;
+  height: 12vw;
 
 }
+
 
 .descriçãoJogo {
-    margin-left: 5%;
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between
-
+  margin-left: 5%;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
 }
 
-
-
 .jogoTitulo {
-    line-height:initial;
-    font-size: xx-large;
+  line-height: initial;
+  font-size: xx-large;
+  width: 100%;
+  padding-bottom: 5%;
 }
 
 .jogoDescrição {
-    font-size: medium;
-    margin-top: -3%;
-    
-  
+  font-size: medium;
+  margin-top: -3%;
+  height: fit-content;
+}
+.textojogo{
+    padding-bottom: 7%;
 }
 
 .botaoVejaMais {
-    font-size: medium;
-    background: #000000;
-    color: #ffffff;
-    border-style: none;
-    border-radius: 5px;
-    height: 12%;
-    width: 30%;
-    display: inline-block;
-    /* bottom: 0%; */
-
+  font-size: medium;
+  background: #000000;
+  color: #ffffff;
+  border-style: none;
+  border-radius: 5px;
+  height: 10%;
+  width: 100%;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  /* bottom: 0%; */
+}
+.botaoVejaMais button{
+    cursor: pointer;
+    color: white;
 }
 .botaoVejaMais:hover {
-    color: #ffffff50;
+  color: #ffffff50;
 }
 
 .preçoJogo {
-    width: 26%;
-    margin-left: 5%; 
-    margin-right: 2%;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    /* align-items: center; */
+  width: 26%;
+  margin-left: 5%;
+  margin-right: 2%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* align-items: center; */
 }
 
 .textoPreço {
-    line-height:initial;
-    font-size: large;
+  line-height: initial;
+  font-size: large;
 }
 .valorAntigo {
-    line-height:initial;
-    text-decoration: line-through;
-    font-size: large;
-    margin-top: -6%;
+  line-height: initial;
+  text-decoration: line-through;
+  font-size: large;
+  margin-top: -6%;
 }
 
-
 .valorAtual {
-    font-size:220%;
-    font-weight:bolder;
-    margin-top: -3%;
-    
-
+  font-size: 220%;
+  font-weight: bolder;
+  margin-top: -3%;
 }
 
 .descontoPorcent {
-    background: #3BCE3B;
-    width: 22%;
-    /* align-items: center; */
-    border-radius: 5px;
-    margin-left: 80%;
-    color: #222222;
-    
-
-    
+  background: #3bce3b;
+  width: 22%;
+  /* align-items: center; */
+  border-radius: 5px;
+  margin-left: 80%;
+  color: #222222;
 }
 
-
 .botaoComprar {
-    font-size: x-large;
-    font-weight: bolder;
-    background: #3BCE3B;
-    color: #222222;
-    border-style: none;
-    border-radius: 5px;
-    height: 22%;
-    width: 100%;
-    /* vertical-align: 0%; */
+  font-size: x-large;
+  font-weight: bolder;
+  background: #3bce3b;
+  color: #222222;
+  border-style: none;
+  border-radius: 5px;
+  height: 12vh;
+  width: 100%;
+  /* vertical-align: 0%; */
 }
 
 .botaoComprar:hover {
-    background: #3BCE3B99;
-    /* color: #ffffff90; */
+  background: #3bce3b99;
+  /* color: #ffffff90; */
+}
+@media (max-width: 720px) {
+  .containerJogo {
+    display: flex;
+    flex-direction: column;
+  }
+  .seçãoJogo {
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    margin-bottom: 4%;
+  }
+  .jogoFoto img {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    padding-left: 0;
+  }
+  .jogoFoto {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 30%;
+    padding: 4%;
+    padding-left: 0%;
+  }
 
+  .textojogo {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    padding: 4%;
+  }
+  .botaoVejaMais {
+    display: flex;
+    flex-direction: row;
+    width: 92%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10%;
+    padding-right: 6%;
+    align-items: center;
+    height: 22%;
+  }
+  .botaoVejaMais button {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height: 27vh;
+    margin-bottom: 10%;
+
+    align-items: center;
+    padding-left: 10%;
+  }
+  .preçoJogo {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-bottom: 5%;
+  }
+  .textoPreço {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    
+  }
+  .botaoComprar button {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    height: 40%;
+    align-items: center;
+    justify-content: center;
+    padding-right: 5%;
+  }
+  .botaoComprar {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    height: 20vh;
+    align-items: center;
+    justify-content: center;
+    font-size: 17pt;
+  }
+  .parteBranca {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    align-items: flex-start;
+    justify-content: center;
+    font-size: 10pt;
+  }
+  .textoPreço {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .valorAtual {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-right: 10%;
+  }
+  .jogoTitulo{
+      padding-bottom: 5%;
+  }
+  .descriçãoJogo{
+      margin-left: 0px;
+      align-items: center;
+  }
+  
+  
+}
+@media(max-width:360px){
+    .botaoComprar{
+        font-size: 15pt;
+    }
 }
