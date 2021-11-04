@@ -20,7 +20,7 @@ function Footer() {
                     </div>
                     <div className="icones_footer">
 
-                        <IconContext.Provider value={{ color: "#808080", size: "3vw", className: "icone_footer" }}>
+                        <IconContext.Provider value={{ color: "#808080", size: "7vw", className: "icone_footer" }}>
 
                             <BsTwitter></BsTwitter>
                             <FaInstagramSquare></FaInstagramSquare>
