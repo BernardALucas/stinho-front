@@ -30,11 +30,12 @@ function PaginaDoJogo({ game_id }) {
 
   const [data, setData] = useState();
   const [filtro, setFiltro] = useState([]);
+  
   const id = localStorage.getItem("user");
-  const newId = JSON.parse(id);
-  const user_id = newId.user_id;
+  const newId = JSON.parse(id); 
 
   useEffect(()=> {
+    if(newId !== null)
        api
           .get(`/library/${newId.user_id}`)
           .then((response)=>{
@@ -99,8 +100,13 @@ function PaginaDoJogo({ game_id }) {
 
         <div className="BotaoComprar">
           <button onClick={() => {
-            ComprarJogo(data.game_id,filtro,user_id);
-
+            if(newId !== null){
+              ComprarJogo(data.game_id,filtro,newId.user_id);
+            }
+            else{
+              alert("Você não está logado");
+              window.location.href = "/login"
+          }
           }}>COMPRAR R${data?.price}</button>
         </div>
 

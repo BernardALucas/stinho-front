@@ -3,23 +3,53 @@ import Header from "../../Header";
 import Footer from "../../Footer";
 import "./All_Games.css";
 import Dropdown from "react-bootstrap/Dropdown";
+import api from "../../services/api";
+
+async function ComprarJogo(game_id,filtro,user_id) {
+    console.log(filtro)
+    for (let i = 0; i < filtro.length; i++) {
+      if(filtro[i].game_id===game_id){
+          alert("Esse jogo já foi adicionado a sua biblioteca");
+          return null;
+      }
+    }
+    try {
+      await api.post("/library/add",  {user_id, game_id});
+      alert("Jogo adicionado a sua biblioteca")
+    }
+    catch (err) {
+      console.warn(err);
+      alert("deu erro")
+    }
+  }
 
 function All_Games() {
     const [data, setData] = useState([]);
     const [filtro, setFiltro] = useState([]);
 
-    async function comprarjogo(e){
-        // try {
-        //     const response = await api.post("/library/add", { user_id,game_id });
-        //     history.push("/Biblioteca");
-        //   } catch (error) 
-        //       alert(error.response.data.notification);
+    const id = localStorage.getItem("user");
+    const newId = JSON.parse(id); 
+
+  useEffect(()=> {
+    if(newId !== null){
+        api
+          .get(`/library/${newId.user_id}`)
+          .then((response)=>{
+              setFiltro(response.data);
+          })
     }
 
+    
+  }, [])
+
     useEffect(() => {
-        fetch('http://localhost:3333/games')
-            .then((response) => response.json())
-            .then(setData);
+        api
+        .get("/games/")
+        .then((response)=>{
+            setData(response.data);
+        });
+
+        console.log(data)
     }, []);
 
     return (
@@ -98,7 +128,15 @@ function All_Games() {
                                     </div>
                                     <button
                                         className="botaoComprar"
-                                        onClick={ () => {window.location.href = game_id; }}
+                                        onClick={ () => {
+                                            if(newId !== null){
+                                                ComprarJogo(data.game_id,filtro,newId.user_id);
+                                              }
+                                            else{
+                                                alert("Você não está logado");
+                                                window.location.href = "/login"
+                                            }
+                                         }}
                                     >
                                         {" "}
                                         COMPRAR{" "}
