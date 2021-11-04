@@ -24,7 +24,9 @@
   border-radius: 10px;
   margin-left: 2%;
   width: 25vw;
-  height: 100%;
+  object-fit: cover;
+  height: 25vh;
+
 }
 .jogoFoto img {
   object-fit: fill;
@@ -96,7 +98,7 @@
 
 .textoPreço {
   line-height: initial;
-  font-size: large;
+  font-size: 170%;
 }
 .valorAntigo {
   line-height: initial;
@@ -106,7 +108,7 @@
 }
 
 .valorAtual {
-  font-size: 170%;
+  font-size: 230%;
   font-weight: bolder;
   margin-top: -3%;
 }
@@ -137,7 +139,15 @@
   /* color: #ffffff90; */
 }
 @media (max-width: 1050px){
-
+  .valorAtual {
+    font-size: 170%;
+    font-weight: bolder;
+    margin-top: -3%;
+}
+  .textoPreço {
+    line-height: initial;
+    font-size: large;
+  }
 }
 @media (max-width: 720px) {
   .containerJogo {
