@@ -8,6 +8,21 @@ function All_Games() {
     const [data, setData] = useState([]);
     const [filtro, setFiltro] = useState([]);
 
+    async function comprarjogo(e){
+        try {
+            const response = await api.post("/library/add", {  });
+            login(response.data.acessToken);
+            history.push("/");
+          } catch (error) {
+            if(error.response.status ===403){
+              alert("Credenciais Invalidas!");
+            }
+            else{
+              alert(error.response.data.notification);
+            }
+          }
+    }
+
     useEffect(() => {
         fetch('http://localhost:3333/games')
             .then((response) => response.json())
@@ -76,7 +91,11 @@ function All_Games() {
                                         <p className="jogoTitulo"> {title}:</p>
                                         <p className="jogoDescrição"> {description} </p>
                                     </div>
-                                    <button className="botaoVejaMais"> Veja Mais </button>
+                                    <button className="botaoVejaMais" onClick={() => {
+                                            window.location.href = game_id;
+                                        }}
+                                        >
+                                         Veja Mais </button>
                                 </div>
 
                                 <div className="preçoJogo">
@@ -86,9 +105,7 @@ function All_Games() {
                                     </div>
                                     <button
                                         className="botaoComprar"
-                                        onClick={() => {
-                                            window.location.href = game_id;
-                                        }}
+                                        onClick={comprarjogo}
                                     >
                                         {" "}
                                         COMPRAR{" "}
