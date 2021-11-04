@@ -9,18 +9,11 @@ function All_Games() {
     const [filtro, setFiltro] = useState([]);
 
     async function comprarjogo(e){
-        try {
-            const response = await api.post("/library/add", {  });
-            login(response.data.acessToken);
-            history.push("/");
-          } catch (error) {
-            if(error.response.status ===403){
-              alert("Credenciais Invalidas!");
-            }
-            else{
-              alert(error.response.data.notification);
-            }
-          }
+        // try {
+        //     const response = await api.post("/library/add", { user_id,game_id });
+        //     history.push("/Biblioteca");
+        //   } catch (error) 
+        //       alert(error.response.data.notification);
     }
 
     useEffect(() => {
