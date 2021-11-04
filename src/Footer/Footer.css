@@ -4,6 +4,7 @@
     flex-direction: row;
     width: 100vw;
     height: 20%;
+    min-height: 35%;
 }
 .icones_footer{
     display: flex;
