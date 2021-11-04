@@ -24,6 +24,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
       }
     />
   );
+
 function Routes(){
     return(
     <BrowserRouter> 
@@ -31,7 +32,7 @@ function Routes(){
             <Route exact path="/login" component ={Login}/>
             <Route exact path="/cadastro" component ={Cadastro}/>
             <Route exact path="/allgames" component ={All_Games}/>
-            <Route path="/biblioteca" component ={Biblioteca}/>        
+            <PrivateRoute path="/biblioteca" component ={Biblioteca}/>        
             <PrivateRoute path="/perfil" component ={Perfil}/>
             <Route path="/editar_perfil" component ={Editar_Perfil}/>
 
@@ -48,7 +49,6 @@ function Routes(){
             <Route path="/850ded97-50e4-420b-a0cd-97b909498094" render ={()=> <PaginaDoJogo game_id = "850ded97-50e4-420b-a0cd-97b909498094"/>}/>
             <Route path="/76d126c2-45dd-404f-ae45-0ae85c461615" render ={()=> <PaginaDoJogo game_id = "76d126c2-45dd-404f-ae45-0ae85c461615"/>}/>
             <Route path="/e6fd65bd-ac7e-4554-a549-a723b8c14d6b" render ={()=> <PaginaDoJogo game_id = "e6fd65bd-ac7e-4554-a549-a723b8c14d6b"/>}/>
-
             
             <Route exact path="/" component ={Home}/>
 
