@@ -4,27 +4,28 @@ import Footer from "../../Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useHistory } from "react-router-dom";
 import api from "../../services/api";
-import {login} from "../../services/auth"
-import { BsFillCreditCard2FrontFill, BsListNested } from "react-icons/bs";
+import { login } from "../../services/auth";
 
 function Login() {
   const history = useHistory();
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
+  const isFailureStatus = (result) => {
+    return !result || result.status >= 400;
+  };
 
   async function handlelogin(e) {
     e.preventDefault();
-    try {
-      const response = await api.post("/login", { email, password });
-      login(response.data.acessToken);
+
+    const response = await api.post("/login", { email, password });
+    if (isFailureStatus(response)) {
+      alert("Credenciais inválidas");
+      history.push("/login");
+      setEmail("");
+      setPassword("");
+    } else {
+      login(response.data);
       history.push("/");
-    } catch (error) {
-      if(error.response.status ===403){
-        alert("Credenciais Invalidas!");
-      }
-      else{
-        alert(error.response.data.notification);
-      }
     }
   }
 
@@ -39,8 +40,7 @@ function Login() {
                 history.push("/");
               }}
             >
-              {" "}
-              voltar para a pagina principal
+              Voltar para a pagina principal
             </button>
           </div>
 
@@ -51,13 +51,13 @@ function Login() {
             <div className="inputs-login">
               <input
                 className="email-login"
-                placeholder="endereço de email"
+                placeholder="Endereço de email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               ></input>
               <input
                 className="email-login"
-                placeholder="senha"
+                placeholder="Senha"
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
@@ -70,25 +70,25 @@ function Login() {
                 />
                 <label for="checkbox-login" className="manter-logado">
                   {" "}
-                  manter-me logado{" "}
+                  Manter-me logado{" "}
                 </label>
-                <button className="btn-login">esqueceu sua senha</button>
+                <button className="btn-login">Esqueceu sua senha?</button>
               </div>
               <div className="botao-logar">
                 <button className="btn-logar" onClick={handlelogin}>
-                  iniciar sessão
+                  Iniciar sessão
                 </button>
               </div>
             </div>
             <div className="cadastrar-login">
-              ainda não é cadastrado?
+              Ainda não é cadastrado?
               <button
                 className="btn-login"
                 onClick={() => {
                   history.push("cadastro");
                 }}
               >
-                cadastrar-se
+                Cadastrar-se
               </button>
             </div>
           </div>

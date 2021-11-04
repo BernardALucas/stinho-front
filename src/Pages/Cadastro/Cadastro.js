@@ -18,10 +18,10 @@ function Cadastro() {
   const [street, setStreet] = useState();
   const [number, setNumber] = useState();
 
-  async function Cadastro(e) {
+  function cadastro(e) {
     e.preventDefault();
-    try {
-      api.post("/users/createnewuser", {
+    api
+      .post("/users/createnewuser", {
         email,
         password,
         name,
@@ -33,14 +33,16 @@ function Cadastro() {
         district,
         street,
         number,
+      })
+      .then(() => {
+        alert("Cadastrado com Sucesso!!");
+        window.location.href = "/login";
+      })
+      .catch((err) => {
+        console.log("erro", err);
+        alert("Credenciais Inválidas");
       });
-      console.log(email);
-    } catch (error) {
-      console.warn(error);
-      alert(error.message);
-    }
   }
-
   return (
     <div>
       <div className="base-cadastro">
@@ -52,11 +54,6 @@ function Cadastro() {
           <div className="input-cadastro">
             <input
               className="caixa-cadastro"
-              placeholder="Endereço de E-mail"
-              onChange={(e) => setEmail(e.target.value)}
-            ></input>
-            <input
-              className="caixa-cadastro"
               placeholder="Nome"
               onChange={(e) => setName(e.target.value)}
             ></input>
@@ -65,6 +62,12 @@ function Cadastro() {
               placeholder="Nome de perfil"
               onChange={(e) => setNickname(e.target.value)}
             ></input>
+            <input
+              className="caixa-cadastro"
+              placeholder="Endereço de E-mail"
+              onChange={(e) => setEmail(e.target.value)}
+            ></input>
+
             <input
               className="caixa-cadastro"
               placeholder="Senha"
@@ -120,7 +123,10 @@ function Cadastro() {
               ></input>
             </div>
 
-            <button className="botao-cadastrar-se" onClick={Cadastro}> Criar uma conta</button>
+            <button className="botao-cadastrar-se" onClick={cadastro}>
+              {" "}
+              Criar uma conta
+            </button>
             <div className="entrar-cadastro">
               Já é cadastrado?
               <button

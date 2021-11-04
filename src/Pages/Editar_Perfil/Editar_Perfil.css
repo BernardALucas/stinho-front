@@ -17,6 +17,7 @@
 .Dados_Editar_Perfil {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   width: 100%;
   height: 100%;
   background-color: #323232;
@@ -189,7 +190,7 @@
 }
 
 .Mudar_Telefone {
-  width: 50%;
+  width: 100%;
   margin-top: 2%;
   display: flex;
   flex-direction: row;
@@ -294,7 +295,7 @@
   color: #000000;
   border: 0.25px solid #000000;
 }
-.Barra_Verde_Estética {
+.Barra_Verde_Estética_Editar_Perfil {
   background-color: #3bce3b;
   color: #3bce3b;
   height: 1px;
@@ -305,7 +306,9 @@
   .Container_Editar_Perfil {
     display: flex;
     align-items: center;
-    padding: 2%;
+    padding-right: 12%;
+    padding-left: 12%;
+    padding-top: 3%;
   }
   .Excluir_Perfil {
     display: flex;
