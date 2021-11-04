@@ -2,24 +2,9 @@ import React, { useState, useRef, useEffect } from "react";
 import "./Biblioteca.css";
 import Footer from "../../Footer";
 import Header from "../../Header";
-import { useHistory } from "react-router-dom";
 import api from "../../services/api";
-import { IoTrashOutline } from "react-icons/io5";
 
-async function ExluirJogo(user_id,game_id){
-    const history = useHistory();
-    console.log(user_id);
-    try{
-        await api.delete("/library/delete/:user_id/:game_id",{user_id, game_id});
-        alert("um jogo foi exluido da sua biblioteca")
-        history.push("/Biblioteca");
-    }
-    catch (err) {
-        console.warn(err);
-        alert("deu erro")
-      }
 
-}
 function Biblioteca() {
     const [data, setData] = useState([]);
     const id = localStorage.getItem("user");
@@ -57,9 +42,6 @@ function Biblioteca() {
 
                                 <div className="titulo-jogo1-biblioteca">
                                     <h1>{title}</h1>
-                                    <button className="lixeira-biblioteca" onClick={() => {ExluirJogo(data.game_id,user_id)}}>
-                                    <IoTrashOutline size="2vw"></IoTrashOutline>
-                                    </button>
                                 </div>
                             </div>
                         );

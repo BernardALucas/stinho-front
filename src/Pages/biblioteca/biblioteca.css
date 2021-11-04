@@ -85,7 +85,7 @@
 }
 
 
-/* @media ( max-width: 1080px){
+@media ( max-width: 1080px){
     .fileira-biblioteca h1{
         font-size: 15pt;
     }
@@ -117,5 +117,5 @@
         width: 60vw;
         height: 75vw;
     }
-} */
+}
 
