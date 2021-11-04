@@ -5,15 +5,19 @@ import Header from "../../Header";
 import api from "../../services/api";
 import "./PaginaDoJogo.css";
 
-async function ComprarJogo(game_id) {
 
-  const id = localStorage.getItem("user");
-  const newId = JSON.parse(id);
-  const user_id = newId.user_id;
 
+async function ComprarJogo(game_id,filtro,user_id) {
+  console.log(filtro)
+  for (let i = 0; i < filtro.length; i++) {
+    if(filtro[i].game_id===game_id){
+        alert("Esse jogo já foi adicionado a sua biblioteca");
+        return null;
+    }
+  }
   try {
     await api.post("/library/add",  {user_id, game_id});
-    
+    alert("Jogo adicionado a sua biblioteca")
   }
   catch (err) {
     console.warn(err);
@@ -24,9 +28,20 @@ async function ComprarJogo(game_id) {
 
 function PaginaDoJogo({ game_id }) {
 
-  const [data, setData] = useState()
+  const [data, setData] = useState();
+  const [filtro, setFiltro] = useState([]);
+  const id = localStorage.getItem("user");
+  const newId = JSON.parse(id);
+  const user_id = newId.user_id;
 
+  useEffect(()=> {
+       api
+          .get(`/library/${newId.user_id}`)
+          .then((response)=>{
+              setFiltro(response.data);
+          })
 
+  }, [])
 
   useEffect(() => {
     api.get(`/games/${game_id}`)
@@ -84,7 +99,7 @@ function PaginaDoJogo({ game_id }) {
 
         <div className="BotaoComprar">
           <button onClick={() => {
-            ComprarJogo(data.game_id);
+            ComprarJogo(data.game_id,filtro,user_id);
 
           }}>COMPRAR R${data?.price}</button>
         </div>

@@ -12,6 +12,21 @@
 .titulo-biblioteca h1{
     color: white;
 }
+.titulo-jogo1-biblioteca{
+    display: flex;
+    justify-content: space-between;
+
+}
+.lixeira-biblioteca{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5vh;
+    background-color:#121212;
+    border-style: hidden;
+}
+.lixeira-biblioteca:hover{
+    color: red;
+}
 
 .fileira-biblioteca{
     display: flex;

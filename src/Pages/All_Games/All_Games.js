@@ -98,7 +98,7 @@ function All_Games() {
                                     </div>
                                     <button
                                         className="botaoComprar"
-                                        onClick={comprarjogo}
+                                        onClick={ () => {window.location.href = game_id; }}
                                     >
                                         {" "}
                                         COMPRAR{" "}
