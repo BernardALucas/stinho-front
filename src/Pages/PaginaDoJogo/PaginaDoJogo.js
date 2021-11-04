@@ -5,14 +5,33 @@ import Header from "../../Header";
 import api from "../../services/api";
 import "./PaginaDoJogo.css";
 
-function PaginaDoJogo({game_id}) {
+async function ComprarJogo(game_id) {
+
+  const id = localStorage.getItem("user");
+  const newId = JSON.parse(id);
+  const user_id = newId.user_id;
+
+  try {
+    await api.post("/library/add",  {user_id, game_id});
+    
+  }
+  catch (err) {
+    console.warn(err);
+    alert("deu erro")
+  }
+}
+
+
+function PaginaDoJogo({ game_id }) {
 
   const [data, setData] = useState()
-  
-  useEffect(()=>{
+
+
+
+  useEffect(() => {
     api.get(`/games/${game_id}`)
-    .then((response) => setData(response.data))
-  },[])
+      .then((response) => setData(response.data))
+  }, [])
 
 
   return (
@@ -64,7 +83,10 @@ function PaginaDoJogo({game_id}) {
         </div>
 
         <div className="BotaoComprar">
-          <button>COMPRAR R${data?.price}</button>
+          <button onClick={() => {
+            ComprarJogo(data.game_id);
+
+          }}>COMPRAR R${data?.price}</button>
         </div>
 
         <div className="Barra_Verde_Estética2"></div>
