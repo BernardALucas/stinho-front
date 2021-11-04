@@ -111,7 +111,7 @@ function Header() {
               </Dropdown.Item>
               <Dropdown.Item
                 onClick={() => {
-                  window.location.href = "/perfil";
+                  window.location.href = "/login";
                 }}
               >
               </Dropdown.Item>
