@@ -102,6 +102,7 @@ function PaginaDoJogo({ game_id }) {
           <button onClick={() => {
             if(newId !== null){
               ComprarJogo(data.game_id,filtro,newId.user_id);
+              alert("Jogo adicionado a biblioteca");
             }
             else{
               alert("Você não está logado");
