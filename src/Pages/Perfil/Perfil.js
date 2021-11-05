@@ -39,7 +39,7 @@ function Perfil() {
               <div className="Username_Profile"> {user?.nickname}</div>
               <div className="Userdata_Profile">
                 <p>
-                  {user?.city} {user?.country}
+                  {user?.city}, {user?.country}
                 </p>{" "}
                 <p>{user?.email}</p> <p>{user?.cellphone}</p>{" "}
                 <div className="Text_Profile">{user?.nutshell}</div>{" "}
