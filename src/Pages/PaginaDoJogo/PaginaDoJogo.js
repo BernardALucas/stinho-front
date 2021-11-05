@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Button } from "react-bootstrap";
 import Footer from "../../Footer";
 import Header from "../../Header";
 import api from "../../services/api";

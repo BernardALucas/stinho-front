@@ -9,28 +9,28 @@ import api from "../../services/api";
 function Perfil() {
   const [user, setUser] = useState();
   const [data, setData] = useState();
-  const jogos = [];
 
   const id = localStorage.getItem("user");
   const newId = JSON.parse(id);
 
 
   useEffect(() => {
+
     api
-      .get(`/library/${newId.user_id}`)
-      .then((response) => {
+    .get(`/library/${newId.user_id}`)
+    .then((response)=>{
         console.log(response.data);
         setData(response.data);
-        for (let i = 0; i < response.data.length || i < 3; i++){
-          jogos[i] = response.data[i];
-          }
-      })      
-      
-    }, []);
+    })
 
-    useEffect(()=>{
-      console.log(data);
-    }, [data])
+}, []);
+
+/*     useEffect(()=>{
+      for (let i = 0; i < 3; i++){
+        jogos[i] = data[i];
+        console.log(jogos)
+        }
+    }, [data]) */
 
     
   useEffect(() => {
@@ -47,6 +47,7 @@ function Perfil() {
 
   return (
     <div>
+      {console.log(data)}
       <div Header>{Header()}</div>
       <div className="Container_Profile">
         <div className="Left_Wrapper_Profile">
@@ -79,20 +80,26 @@ function Perfil() {
             </div>
           </div>
           <div className="Recent_Games_Title"> Jogos Recentes</div>
-          {  jogos.map((var_jogo) => {
-              console.log(data);
+          
+          {data.map((iten) => {
+            console.log(data);
+
+            const { title, image, developer, } = iten;
+
+            return (
               <div className="Recent_Games">
                 <img
                   className="Game_Photo_Profile"
-                  src={var_jogo.image}
+                  src={image}
                   alt="Jogos Recentes"
                 ></img>
               </div>
+            );
                        
           })};
           
       
-          <div className="Recent_Games">
+{/*           <div className="Recent_Games" >
             <img
               className="Game_Photo_Profile"
               src="./images/new-world-esticado.png"
@@ -124,7 +131,7 @@ function Perfil() {
               <div className="Game_Name_Profile">New World</div>
               <div className="Hours_Played_Profile"> 50 horas registradas</div>
             </div>
-          </div>
+          </div> */}
           <div className="Library_Button_Profile">
             <button
               onClick={() => {

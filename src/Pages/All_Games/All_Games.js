@@ -101,7 +101,7 @@ function All_Games() {
                 </div>
 
                 {data.map((jogo) => {
-                    const { game_id, title, price, old_price, image, developer, genero, description, category } = jogo;
+                    const { game_id, title, price, image, genero, description } = jogo;
 
                     if (filtro.length === 0 || genero.includes(filtro[0]))
                         return (

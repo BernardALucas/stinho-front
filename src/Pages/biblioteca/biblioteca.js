@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./Biblioteca.css";
 import Footer from "../../Footer";
 import Header from "../../Header";
@@ -9,7 +9,6 @@ function Biblioteca() {
     const [data, setData] = useState([]);
     const id = localStorage.getItem("user");
     const newId = JSON.parse(id);
-    const user_id = newId.user_id;
 
     useEffect(() => {
         console.log(newId.user_id);
@@ -35,7 +34,7 @@ function Biblioteca() {
                     {data.map((iten) => {
                         console.log(data);
 
-                        const { game_id, title, price, old_price, image, developer, genero, description, category, nivel_destaque } = iten;
+                        const { title,  image} = iten;
 
                         return (
                             <div className="botao-jogos-biblioteca">
