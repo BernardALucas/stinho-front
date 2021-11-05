@@ -17,6 +17,7 @@ function Biblioteca() {
         api
         .get(`/library/${newId.user_id}`)
         .then((response)=>{
+            console.log(response.data);
             setData(response.data);
         })
 

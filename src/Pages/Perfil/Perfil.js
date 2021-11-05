@@ -8,16 +8,37 @@ import api from "../../services/api";
 
 function Perfil() {
   const [user, setUser] = useState();
+  const [data, setData] = useState();
+  const jogos = [];
+
+  const id = localStorage.getItem("user");
+  const newId = JSON.parse(id);
+
 
   useEffect(() => {
-    console.log("vasco")
+    api
+      .get(`/library/${newId.user_id}`)
+      .then((response) => {
+        console.log(response.data);
+        setData(response.data);
+        for (let i = 0; i < response.data.length || i < 3; i++){
+          jogos[i] = response.data[i];
+          }
+      })      
+      
+    }, []);
+
+    useEffect(()=>{
+      console.log(data);
+    }, [data])
+
+    
+  useEffect(() => {
     const id = localStorage.getItem("user");
     const newId = JSON.parse(id);
-    console.log({newId})
     api
       .get(`/users/myprofile/${newId.user_id}`)
       .then((response) => {
-        console.log({response})
         setUser(response.data)
       });
   }, []);
@@ -58,6 +79,19 @@ function Perfil() {
             </div>
           </div>
           <div className="Recent_Games_Title"> Jogos Recentes</div>
+          {  jogos.map((var_jogo) => {
+              console.log(data);
+              <div className="Recent_Games">
+                <img
+                  className="Game_Photo_Profile"
+                  src={var_jogo.image}
+                  alt="Jogos Recentes"
+                ></img>
+              </div>
+                       
+          })};
+          
+      
           <div className="Recent_Games">
             <img
               className="Game_Photo_Profile"
