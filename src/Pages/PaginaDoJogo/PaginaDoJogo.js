@@ -15,6 +15,7 @@ async function ComprarJogo(game_id,filtro,user_id) {
     }
   }
   try {
+    console.log("entrei aqui");
     await api.post("/library/add",  {user_id, game_id});
     alert("Jogo adicionado a sua biblioteca")
   }
@@ -101,7 +102,6 @@ function PaginaDoJogo({ game_id }) {
           <button onClick={() => {
             if(newId !== null){
               ComprarJogo(data.game_id,filtro,newId.user_id);
-              alert("Jogo adicionado a biblioteca");
             }
             else{
               alert("Você não está logado");
@@ -119,12 +119,12 @@ function PaginaDoJogo({ game_id }) {
         <div className="Jogos">
           <div className="JogoUm">
             <button>
-              <img src="./images/new_world_logo.png" alt="New World"></img>
+              <img src="https://image.api.playstation.com/vulcan/ap/rnd/202007/3011/XX85ZND1RuA13iphoE1Qb7ex.png" alt="HITMAN 3"></img>
             </button>
           </div>
           <div className="JogoDois">
             <button>
-              <img src="./images/new_world_logo.png" alt="New World"></img>
+              <img src="https://image.api.playstation.com/vulcan/img/cfn/11307yrvfw9UJfl3O8MiK30X3y0WujLjFxwmvOQHns32tTUYhn52rzGEre3PuHH6ggxlVfBYqktodGZt-mVOtAPncZcBjeW5.png" alt="Maneater"></img>
             </button>
           </div>
         </div>

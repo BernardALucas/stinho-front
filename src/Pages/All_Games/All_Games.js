@@ -5,51 +5,48 @@ import "./All_Games.css";
 import Dropdown from "react-bootstrap/Dropdown";
 import api from "../../services/api";
 
-async function ComprarJogo(game_id,filtro,user_id) {
-    console.log(filtro)
+async function ComprarJogo(game_id, filtro, user_id) {
     for (let i = 0; i < filtro.length; i++) {
-      if(filtro[i].game_id===game_id){
-          alert("Esse jogo já foi adicionado a sua biblioteca");
-          return null;
-      }
+        if (filtro[i].game_id === game_id) {
+            alert("Esse jogo já foi adicionado a sua biblioteca");
+            return null;
+        }
     }
     try {
-      await api.post("/library/add",  {user_id, game_id});
-      alert("Jogo adicionado a sua biblioteca")
+        await api.post("/library/add", { user_id, game_id });
+        alert("Jogo adicionado a sua biblioteca")
     }
     catch (err) {
-      console.warn(err);
-      alert("deu erro")
+        console.warn(err);
+        alert("deu erro")
     }
-  }
+}
 
 function All_Games() {
     const [data, setData] = useState([]);
     const [filtro, setFiltro] = useState([]);
+    const [permissao, setPermissao] = useState([])
 
     const id = localStorage.getItem("user");
-    const newId = JSON.parse(id); 
+    const newId = JSON.parse(id);
 
-  useEffect(()=> {
-    if(newId !== null){
-        api
-          .get(`/library/${newId.user_id}`)
-          .then((response)=>{
-              setFiltro(response.data);
-          })
-    }
+    useEffect(() => {
+        if (newId !== null) {
+            api
+                .get(`/library/${newId.user_id}`)
+                .then((response) => {
+                    setPermissao(response.data);
+                })
+        }
 
-    
-  }, [])
+    }, [])
 
     useEffect(() => {
         api
-        .get("/games/")
-        .then((response)=>{
-            setData(response.data);
-        });
-
-        console.log(data)
+            .get("/games/")
+            .then((response) => {
+                setData(response.data);
+            });
     }, []);
 
     return (
@@ -101,9 +98,9 @@ function All_Games() {
                 </div>
 
                 {data.map((jogo) => {
-                    const { game_id, title, price, image, genero, description } = jogo;
+                    const { game_id, title, price, image, category, description } = jogo;
 
-                    if (filtro.length === 0 || genero.includes(filtro[0]))
+                    if (filtro.length === 0 || category.includes(filtro[0]))
                         return (
                             <div className="seçãoJogo">
 
@@ -114,11 +111,10 @@ function All_Games() {
                                         <p className="jogoTitulo"> {title}:</p>
                                         <p className="jogoDescrição"> {description} </p>
                                     </div>
+
                                     <button className="botaoVejaMais" onClick={() => {
-                                            window.location.href = game_id;
-                                        }}
-                                        >
-                                         Veja Mais </button>
+                                        window.location.href = game_id;
+                                    }}> Veja Mais </button>
                                 </div>
 
                                 <div className="preçoJogo">
@@ -128,15 +124,15 @@ function All_Games() {
                                     </div>
                                     <button
                                         className="botaoComprar"
-                                        onClick={ () => {
-                                            if(newId !== null){
-                                                ComprarJogo(data.game_id,filtro,newId.user_id);
-                                              }
-                                            else{
+                                        onClick={() => {
+                                            if (newId !== null) {
+                                                ComprarJogo(game_id, permissao, newId.user_id);
+                                            }
+                                            else {
                                                 alert("Você não está logado");
                                                 window.location.href = "/login"
                                             }
-                                         }}
+                                        }}
                                     >
                                         {" "}
                                         COMPRAR{" "}

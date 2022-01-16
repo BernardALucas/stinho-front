@@ -79,27 +79,9 @@ function Perfil() {
               </button>
             </div>
           </div>
-          <div className="Recent_Games_Title"> Jogos Recentes</div>
-          
-          {data.map((iten) => {
-            console.log(data);
-
-            const { title, image, developer, } = iten;
-
-            return (
-              <div className="Recent_Games">
-                <img
-                  className="Game_Photo_Profile"
-                  src={image}
-                  alt="Jogos Recentes"
-                ></img>
-              </div>
-            );
-                       
-          })};
-          
+          <div className="Recent_Games_Title"> Jogos Recentes</div>       
       
-{/*           <div className="Recent_Games" >
+          <div className="Recent_Games" >
             <img
               className="Game_Photo_Profile"
               src="./images/new-world-esticado.png"
@@ -113,25 +95,26 @@ function Perfil() {
           <div className="Recent_Games">
             <img
               className="Game_Photo_Profile"
-              src="./images/new-world-esticado.png"
+              src="https://cdn1.epicgames.com/83d6990f16444655866b04be562bf589/offer/MAD_STD_Store_Landscape_2560x1440-2560x1440-0d275f75a75f6367c373e727bc78b4d1.jpg"
               alt="Jogos Recentes"
             ></img>
             <div className="Game_Info_Profile">
-              <div className="Game_Name_Profile">New World</div>
-              <div className="Hours_Played_Profile">50 horas registradas</div>
+              <div className="Game_Name_Profile">Riders Republic</div>
+              <div className="Hours_Played_Profile">30 horas registradas</div>
             </div>
           </div>
           <div className="Recent_Games">
             <img
               className="Game_Photo_Profile"
-              src="./images/new-world-esticado.png"
+              src="https://image.api.playstation.com/vulcan/img/rnd/202010/2217/LsaRVLF2IU2L1FNtu9d3MKLq.jpg"
               alt="Jogos Recentes"
             ></img>
             <div className="Game_Info_Profile">
-              <div className="Game_Name_Profile">New World</div>
-              <div className="Hours_Played_Profile"> 50 horas registradas</div>
+              <div className="Game_Name_Profile">God of War</div>
+              <div className="Hours_Played_Profile"> 60 horas registradas</div>
             </div>
-          </div> */}
+          </div>
+
           <div className="Library_Button_Profile">
             <button
               onClick={() => {

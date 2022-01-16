@@ -113,6 +113,17 @@
   margin-top: -3%;
 }
 
+.btn-dark {
+  color: #fff;
+  background-color: black;
+  border-color: black;
+}
+
+.btn-secondary {
+  color: #fff;
+  background-color: #222222;
+  border-color: #222222;}
+
 .descontoPorcent {
   background: #3bce3b;
   width: 22%;
